@@ -1,0 +1,370 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using TSCActiveX;
+using ZXing;
+
+namespace TSCLIB_DLL_IN_C_Sharp
+{
+    public partial class Form1 : Form
+    {
+        /*
+        SqlDataAdapter adpt;
+        DataTable dt;
+        DbEntities db;
+        */
+        public Form1()
+        {
+            InitializeComponent();
+            showdata();
+        }
+
+        public void showdata() {
+            /*adpt = new SqlDataAdapter("select * from SKUMASTER", );
+            dt = new DataTable();
+            adpt.Fill(dt);
+            dgv1.DataSource = dt;*/
+            }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtProduct.Text == "")
+            {
+                MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า");
+            }
+            else if (txtQty.Text == "")
+            {
+                MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.)");
+            }
+            else if (txtPrice.Text == "")
+            {
+                MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย");
+            }
+            else if (txtBarcode.Text == "")
+            {
+                MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า");
+            }
+            else
+            {
+                string barcode = richTextBox1.Text;
+                string product = txtProduct.Text;
+                string qty = txtQty.Text;
+                string price = txtPrice.Text;
+                string set = txtSet.Text;
+                double qtys = double.Parse(qty);
+                double prices = double.Parse(price);
+                double total_price;
+                total_price = qtys * prices;
+
+                TSCActiveX.TSCLIB TSCLIB_DLL = new TSCActiveX.TSCLIB();
+                //TSCLIB_DLL.ActiveXabout();
+                TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
+                TSCLIB_DLL.ActiveXsendcommand("SIZE 104 mm, 27.6 mm");
+                TSCLIB_DLL.ActiveXsendcommand("GAP 0 mm, 0 mm");
+                TSCLIB_DLL.ActiveXsendcommand("SPEED 4");
+                TSCLIB_DLL.ActiveXsendcommand("DIRECTION 1");
+                TSCLIB_DLL.ActiveXsendcommand("DENSITY 12");
+                TSCLIB_DLL.ActiveXsendcommand("SET TEAR ON");
+                TSCLIB_DLL.ActiveXclearbuffer();
+
+                //TSCLIB_DLL.ActiveXprinterfont("300", "150", "3", "0", "1", "1", "X3 น้ำเปล่า 3X");
+                //TSCLIB_DLL.ActiveXwindowsfont(20, 100, 50, 0, 0, 0, "AngsanaUPC", "A1 กระดาษ A1");
+                //TSCLIB_DLL.ActiveXwindowsfont(20, 100, 50, 0, 0, 0, "Tahoma", "A1 กระดาษ A1");
+                //TSCLIB_DLL.ActiveXdownloadpcx("UL.PCX", "UL.PCX");
+                //TSCLIB_DLL.ActiveXsendcommand("PUTPCX 100,400,\"UL.PCX\"");
+
+                //|| ใบที่ 1
+                TSCLIB_DLL.ActiveXwindowsfont(80, 30, 35, 0, 0, 0, "AngsanaUPC", product);
+                TSCLIB_DLL.ActiveXbarcode("80", "60", "128", "80", "1", "0", "1", "5", barcode);
+                TSCLIB_DLL.ActiveXwindowsfont(45, 150, 35, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
+                TSCLIB_DLL.ActiveXwindowsfont(80, 170, 35, 0, 0, 0, "AngsanaUPC", price);
+                TSCLIB_DLL.ActiveXwindowsfont(130, 150, 35, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
+                TSCLIB_DLL.ActiveXwindowsfont(170, 170, 35, 0, 0, 0, "AngsanaUPC", qty + ".");
+                TSCLIB_DLL.ActiveXwindowsfont(70, 190, 40, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
+                TSCLIB_DLL.ActiveXwindowsfont(160, 185, 50, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
+                //||  ใบที่ 1
+
+
+                //|| ใบที่ 2
+                ////TSCLIB_DLL.ActiveXwindowsfont(แนวนอน, แนวตั้ง , ขนานตัวอักษร, 0, 0, 0, "AngsanaUPC", product);////
+                ///TSCLIB_DLL.ActiveXbarcode(""+(20+325), "55", "EAN13", "80", "1", "0", "ยาว", "กว้าง", barcode);
+                TSCLIB_DLL.ActiveXwindowsfont(90 + 250, 30, 35, 0, 0, 0, "AngsanaUPC", product);
+                TSCLIB_DLL.ActiveXbarcode("" + (20 + 325), "60", "128", "80", "1", "0", "1", "4", barcode);
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 45, 150, 35, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 75, 170, 35, 0, 0, 0, "AngsanaUPC", price);
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 140, 150, 35, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 180, 170, 35, 0, 0, 0, "AngsanaUPC", qty + ".");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 70, 190, 40, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 160, 185, 50, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
+                //|| ใบที่ 2
+
+                //|| ใบที่ 3    
+                TSCLIB_DLL.ActiveXwindowsfont(90 + 270 + 260, 30, 35, 0, 0, 0, "AngsanaUPC", product);
+                TSCLIB_DLL.ActiveXbarcode("" + (20 + 325 + 280), "60", "128", "80", "1", "0", "1", "4", barcode);
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 50, 150, 35, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 80, 170, 35, 0, 0, 0, "AngsanaUPC", price);
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 230 + 185, 150, 35, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 180, 170, 35, 0, 0, 0, "AngsanaUPC", qty + ".");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 70, 190, 40, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
+                TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 160, 185, 50, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
+                //|| ใบที่ 3
+                TSCLIB_DLL.ActiveXprintlabel(set, "1");
+                TSCLIB_DLL.ActiveXcloseport();
+            }
+            
+        }
+       
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hYDataSet.SKUMASTER' table. You can move, or remove it, as needed.
+            this.sKUMASTERTableAdapter.Fill(this.hYDataSet.SKUMASTER);
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string product = txtProduct.Text;
+            string qty = txtQty.Text;
+            string price = txtPrice.Text;
+           
+            BarcodeWriter writer = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
+            if (txtQty.Text == "" && txtPrice.Text == "")
+            {
+                if(txtBarcode.Text == "")
+                {
+                    MessageBox.Show("ยังไม่กรอก Barcode");
+                }
+                else
+                {
+                    pic.Image = writer.Write(richTextBox1.Text);
+                }
+            }
+            else
+            {
+                double qtys = double.Parse(qty);
+                double prices = double.Parse(price);
+                double total_price;
+                total_price = qtys * prices;
+
+                laPrice.Text = (price);
+                laProduct.Text = (product);
+                laTotal_price.Text = (total_price.ToString());
+                laQty.Text = (qty);
+
+                if (txtBarcode.Text == "")
+                {
+                    MessageBox.Show("ยังไม่กรอก Barcode");
+                }
+                else
+                {
+                    pic.Image = writer.Write(richTextBox1.Text);
+                }
+                
+               
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBarcode_TextChanged(object sender, EventArgs e)
+        {   
+            string Barrcode, Check12Digits, Check12Digits2 , Check12Digits3;
+            if (txtBarcode.Text != "")
+            {
+                if (txtQty.Text == "" && txtPrice.Text == "")
+                {
+                    string txtBar = txtBarcode.Text;
+                    Check12Digits = txtBar.PadRight(17, '0');
+                    Barrcode = EAN13Class.EAN13(Check12Digits);
+                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                    {
+                        richTextBox1.Text.ToString();
+                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
+
+                    }
+                }
+                else
+                {
+                    string qty = txtQty.Text;
+                    string price = txtPrice.Text;
+                    double qtys = double.Parse(qty);
+                    double prices = double.Parse(price);
+                    double total_price;
+                    total_price = qtys * prices;
+                    string qtySplit = qty.ToString();
+                    string total_priceSplit = total_price.ToString();
+
+                    char[] spearator = { '.' };
+
+                    // using the method 
+                    String[] qtySplitShow = qtySplit.Split(spearator);
+                    String[] total_priceSplitShow = total_priceSplit.Split(spearator);
+
+                    if (qtySplitShow.Length == 1 )
+                    {
+                      
+                        if (total_priceSplitShow.Length == 1)
+                        {
+                            string showQty = (qtySplitShow[0]);
+                            string showTotal_price = (total_priceSplitShow[0]);
+                            string txtBar = txtBarcode.Text + showTotal_price.ToString() + showQty.ToString();
+                            Check12Digits = txtBar.PadRight(17, '0');
+                            label_Test.Text = (Check12Digits + "T1");
+                            Barrcode = EAN13Class.EAN13(Check12Digits);
+                            if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                            {
+                                richTextBox1.Text.ToString();
+                                richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                                Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                                ChangeTextColor.ChangeColor(richTextBox1, intStart);
+
+                            }
+                        }
+                        else
+                        {
+                            string showQty = (qtySplitShow[0]);
+                            string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
+                            string txtBar = txtBarcode.Text + showTotal_price.ToString() + showQty.ToString();
+                            Check12Digits = txtBar.PadRight(17, '0');
+                            label_Test.Text = (Check12Digits + "T2s");
+                            Barrcode = EAN13Class.EAN13(Check12Digits);
+                            if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                            {
+                                richTextBox1.Text.ToString();
+                                richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                                Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                                ChangeTextColor.ChangeColor(richTextBox1, intStart);
+
+                            }
+                        }                        
+                    }
+                    else
+                    {
+                        string showQty = (qtySplitShow[0]+qtySplitShow[1]);
+                        string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
+                       
+                        //string txtBar = txtBarcode.Text + showTotal_price.ToString()+ showQty.ToString() ;
+                        string txtBars = txtBarcode.Text;
+                        string txtQty = showQty.ToString();
+                        string txtTotal = showTotal_price.ToString();
+                        Check12Digits = txtBars.PadRight(17, '0');
+                        Check12Digits2 = txtQty.PadRight(17, '0');
+                        Check12Digits3 = txtTotal.PadRight(17, '0');
+
+                       
+                        int startIndex = 0;
+                        int length = 6;
+                        int startIndex5 = 0;
+                        int length5 = 5;
+                        String substring1 = Check12Digits.Substring(startIndex, length);
+                        String substring2 = Check12Digits2.Substring(startIndex5, length5);
+                        String substring3 = Check12Digits3.Substring(startIndex, length);
+
+                        label_Test.Text = (substring1 + "T3" + "\n"+ substring3 + "\n" + substring2);
+                        string txtBar = substring1 + substring3 + substring2;
+                        Check12Digits = txtBar.PadRight(17, '0');
+                        Barrcode = EAN13Class.EAN13(Check12Digits);
+                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                        {
+                            richTextBox1.Text.ToString();
+                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
+
+                        }
+                    }
+                    
+                }
+                
+            }           
+            
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQty_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtProduct_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Connect_Click(object sender, EventArgs e)
+        {
+            DataTable dt = sKUMASTERTableAdapter.GetData();
+            DataView dv = new DataView(dt);
+            dv.RowFilter = "SKU_CODE LIKE '%"+txtBarcode.Text+"%'";
+            sKUMASTERDataGridView.DataSource = dv;
+
+            /*int index = e.RowIndex;
+            DataGridViewRow selectedRow = sKUMASTERDataGridView.Rows[index];                       
+            txtProduct.Text = selectedRow.Cells[0].Value.ToString();*/
+
+          //  Console.WriteLine(sKUMASTERDataGridView.Rows[0][0]);
+        }
+
+        
+        private void button2_Click_1(object sender, EventArgs e)
+            
+        {
+           
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void sKUMASTERBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

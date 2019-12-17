@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SKUMASTER">
+          <Key>
+            <PropertyRef Name="SKU_KEY" />
+          </Key>
+          <Property Name="SKU_KEY" Type="int" Nullable="false" />
+          <Property Name="SKU_CODE" Type="varchar" MaxLength="24" Nullable="false" />
+          <Property Name="SKU_NAME" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SKU_E_NAME" Type="varchar" MaxLength="60" />
+          <Property Name="SKU_BARCODE" Type="varchar" MaxLength="24" />
+          <Property Name="SKU_BRN" Type="int" Nullable="false" />
+          <Property Name="SKU_ICCAT" Type="int" Nullable="false" />
+          <Property Name="SKU_S_UTQ" Type="int" Nullable="false" />
+          <Property Name="SKU_T_UTQ" Type="int" Nullable="false" />
+          <Property Name="SKU_K_UTQ" Type="int" Nullable="false" />
+          <Property Name="SKU_VAT_TY" Type="smallint" Nullable="false" />
+          <Property Name="SKU_VAT" Type="money" Nullable="false" />
+          <Property Name="SKU_COST_TY" Type="smallint" Nullable="false" />
+          <Property Name="SKU_STD_COST" Type="float" Nullable="false" />
+          <Property Name="SKU_STOCK" Type="smallint" Nullable="false" />
+          <Property Name="SKU_SKUALT" Type="int" Nullable="false" />
+          <Property Name="SKU_WH_TY" Type="smallint" Nullable="false" />
+          <Property Name="SKU_WH_RATE" Type="money" Nullable="false" />
+          <Property Name="SKU_MSG_1" Type="varchar" MaxLength="60" />
+          <Property Name="SKU_MSG_2" Type="varchar" MaxLength="60" />
+          <Property Name="SKU_MSG_3" Type="varchar" MaxLength="60" />
+          <Property Name="SKU_MIXCOLOR" Type="int" Nullable="false" />
+          <Property Name="SKU_ICCOLOR" Type="int" Nullable="false" />
+          <Property Name="SKU_ICSIZE" Type="int" Nullable="false" />
+          <Property Name="SKU_ICDEPT" Type="int" Nullable="false" />
+          <Property Name="SKU_ICGL" Type="int" Nullable="false" />
+          <Property Name="SKU_ICPRT" Type="int" Nullable="false" />
+          <Property Name="SKU_WL" Type="int" Nullable="false" />
+          <Property Name="SKU_ENABLE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SKU_P_ENABLE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SKU_MIN_QTY" Type="money" Nullable="false" />
+          <Property Name="SKU_MAX_QTY" Type="money" Nullable="false" />
+          <Property Name="SKU_MIN_ORDER" Type="money" Nullable="false" />
+          <Property Name="SKU_MAX_ORDER" Type="money" Nullable="false" />
+          <Property Name="SKU_LEAD_TIME" Type="money" Nullable="false" />
+          <Property Name="SKU_SATISFY" Type="money" Nullable="false" />
+          <Property Name="SKU_SAFTY" Type="money" Nullable="false" />
+          <Property Name="SKU_FREQUENCY" Type="int" />
+          <Property Name="SKU_ACCESS" Type="smallint" Nullable="false" />
+          <Property Name="SKU_ABC" Type="int" />
+          <Property Name="SKU_EOQ_A" Type="money" Nullable="false" />
+          <Property Name="SKU_EOQ_P" Type="money" Nullable="false" />
+          <Property Name="SKU_EOQ_C" Type="money" Nullable="false" />
+          <Property Name="SKU_EOQ_NO" Type="money" Nullable="false" />
+          <Property Name="SKU_SPEC" Type="varchar" MaxLength="7000" />
+          <Property Name="SKU_USAGE" Type="varchar" MaxLength="7000" />
+          <Property Name="SKU_REMARK" Type="varchar" MaxLength="255" />
+          <Property Name="SKU_LAST_O" Type="datetime" Nullable="false" />
+          <Property Name="SKU_LAST_R" Type="datetime" Nullable="false" />
+          <Property Name="SKU_LAST_RCOST" Type="float" Nullable="false" />
+          <Property Name="SKU_LAST_RQTY" Type="money" Nullable="false" />
+          <Property Name="SKU_LAST_COMMIT" Type="datetime" />
+          <Property Name="SKU_SENSITIVITY" Type="int" />
+          <Property Name="SKU_SENS_POS" Type="int" />
+          <Property Name="SKU_LAST_UBCOST" Type="float" Nullable="false" />
+          <Property Name="SKU_LAST_UCCOST" Type="float" Nullable="false" />
+          <Property Name="SKU_ALERT" Type="smallint" Nullable="false" />
+          <Property Name="SKU_ALERT_MSG" Type="varchar" MaxLength="255" />
+          <Property Name="SKU_PRICE" Type="int" />
+          <Property Name="SKU_EQ_FACTOR" Type="varchar" MaxLength="20" />
+          <Property Name="SKU_EQ_NAME" Type="varchar" MaxLength="60" />
+          <Property Name="SKU_UDF_1" Type="money" Nullable="false" />
+          <Property Name="SKU_UDF_2" Type="money" Nullable="false" />
+          <Property Name="SKU_UDF_3" Type="money" Nullable="false" />
+          <Property Name="SKU_UDF_4" Type="money" Nullable="false" />
+          <Property Name="SKU_UDF_5" Type="money" Nullable="false" />
+          <Property Name="SKU_UDF_6" Type="money" Nullable="false" />
+          <Property Name="SKU_LASTUPD" Type="varchar" MaxLength="17" />
+        </EntityType>
+        <EntityContainer Name="HYModelStoreContainer">
+          <EntitySet Name="SKUMASTER" EntityType="Self.SKUMASTER" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HYModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SKUMASTER">
+          <Key>
+            <PropertyRef Name="SKU_KEY" />
+          </Key>
+          <Property Name="SKU_KEY" Type="Int32" Nullable="false" />
+          <Property Name="SKU_CODE" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SKU_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SKU_E_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_BARCODE" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_BRN" Type="Int32" Nullable="false" />
+          <Property Name="SKU_ICCAT" Type="Int32" Nullable="false" />
+          <Property Name="SKU_S_UTQ" Type="Int32" Nullable="false" />
+          <Property Name="SKU_T_UTQ" Type="Int32" Nullable="false" />
+          <Property Name="SKU_K_UTQ" Type="Int32" Nullable="false" />
+          <Property Name="SKU_VAT_TY" Type="Int16" Nullable="false" />
+          <Property Name="SKU_VAT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_COST_TY" Type="Int16" Nullable="false" />
+          <Property Name="SKU_STD_COST" Type="Double" Nullable="false" />
+          <Property Name="SKU_STOCK" Type="Int16" Nullable="false" />
+          <Property Name="SKU_SKUALT" Type="Int32" Nullable="false" />
+          <Property Name="SKU_WH_TY" Type="Int16" Nullable="false" />
+          <Property Name="SKU_WH_RATE" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_MSG_1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_MSG_2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_MSG_3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_MIXCOLOR" Type="Int32" Nullable="false" />
+          <Property Name="SKU_ICCOLOR" Type="Int32" Nullable="false" />
+          <Property Name="SKU_ICSIZE" Type="Int32" Nullable="false" />
+          <Property Name="SKU_ICDEPT" Type="Int32" Nullable="false" />
+          <Property Name="SKU_ICGL" Type="Int32" Nullable="false" />
+          <Property Name="SKU_ICPRT" Type="Int32" Nullable="false" />
+          <Property Name="SKU_WL" Type="Int32" Nullable="false" />
+          <Property Name="SKU_ENABLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SKU_P_ENABLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SKU_MIN_QTY" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_MAX_QTY" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_MIN_ORDER" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_MAX_ORDER" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_LEAD_TIME" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_SATISFY" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_SAFTY" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_FREQUENCY" Type="Int32" />
+          <Property Name="SKU_ACCESS" Type="Int16" Nullable="false" />
+          <Property Name="SKU_ABC" Type="Int32" />
+          <Property Name="SKU_EOQ_A" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_EOQ_P" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_EOQ_C" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_EOQ_NO" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_SPEC" Type="String" MaxLength="7000" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_USAGE" Type="String" MaxLength="7000" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_REMARK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_LAST_O" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SKU_LAST_R" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SKU_LAST_RCOST" Type="Double" Nullable="false" />
+          <Property Name="SKU_LAST_RQTY" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_LAST_COMMIT" Type="DateTime" Precision="3" />
+          <Property Name="SKU_SENSITIVITY" Type="Int32" />
+          <Property Name="SKU_SENS_POS" Type="Int32" />
+          <Property Name="SKU_LAST_UBCOST" Type="Double" Nullable="false" />
+          <Property Name="SKU_LAST_UCCOST" Type="Double" Nullable="false" />
+          <Property Name="SKU_ALERT" Type="Int16" Nullable="false" />
+          <Property Name="SKU_ALERT_MSG" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_PRICE" Type="Int32" />
+          <Property Name="SKU_EQ_FACTOR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_EQ_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SKU_UDF_1" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_UDF_2" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_UDF_3" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_UDF_4" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_UDF_5" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_UDF_6" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SKU_LASTUPD" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SKUMASTER" EntityType="Self.SKUMASTER" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HYModelStoreContainer" CdmEntityContainer="DbEntities">
+          <EntitySetMapping Name="SKUMASTER">
+            <EntityTypeMapping TypeName="HYModel.SKUMASTER">
+              <MappingFragment StoreEntitySet="SKUMASTER">
+                <ScalarProperty Name="SKU_KEY" ColumnName="SKU_KEY" />
+                <ScalarProperty Name="SKU_CODE" ColumnName="SKU_CODE" />
+                <ScalarProperty Name="SKU_NAME" ColumnName="SKU_NAME" />
+                <ScalarProperty Name="SKU_E_NAME" ColumnName="SKU_E_NAME" />
+                <ScalarProperty Name="SKU_BARCODE" ColumnName="SKU_BARCODE" />
+                <ScalarProperty Name="SKU_BRN" ColumnName="SKU_BRN" />
+                <ScalarProperty Name="SKU_ICCAT" ColumnName="SKU_ICCAT" />
+                <ScalarProperty Name="SKU_S_UTQ" ColumnName="SKU_S_UTQ" />
+                <ScalarProperty Name="SKU_T_UTQ" ColumnName="SKU_T_UTQ" />
+                <ScalarProperty Name="SKU_K_UTQ" ColumnName="SKU_K_UTQ" />
+                <ScalarProperty Name="SKU_VAT_TY" ColumnName="SKU_VAT_TY" />
+                <ScalarProperty Name="SKU_VAT" ColumnName="SKU_VAT" />
+                <ScalarProperty Name="SKU_COST_TY" ColumnName="SKU_COST_TY" />
+                <ScalarProperty Name="SKU_STD_COST" ColumnName="SKU_STD_COST" />
+                <ScalarProperty Name="SKU_STOCK" ColumnName="SKU_STOCK" />
+                <ScalarProperty Name="SKU_SKUALT" ColumnName="SKU_SKUALT" />
+                <ScalarProperty Name="SKU_WH_TY" ColumnName="SKU_WH_TY" />
+                <ScalarProperty Name="SKU_WH_RATE" ColumnName="SKU_WH_RATE" />
+                <ScalarProperty Name="SKU_MSG_1" ColumnName="SKU_MSG_1" />
+                <ScalarProperty Name="SKU_MSG_2" ColumnName="SKU_MSG_2" />
+                <ScalarProperty Name="SKU_MSG_3" ColumnName="SKU_MSG_3" />
+                <ScalarProperty Name="SKU_MIXCOLOR" ColumnName="SKU_MIXCOLOR" />
+                <ScalarProperty Name="SKU_ICCOLOR" ColumnName="SKU_ICCOLOR" />
+                <ScalarProperty Name="SKU_ICSIZE" ColumnName="SKU_ICSIZE" />
+                <ScalarProperty Name="SKU_ICDEPT" ColumnName="SKU_ICDEPT" />
+                <ScalarProperty Name="SKU_ICGL" ColumnName="SKU_ICGL" />
+                <ScalarProperty Name="SKU_ICPRT" ColumnName="SKU_ICPRT" />
+                <ScalarProperty Name="SKU_WL" ColumnName="SKU_WL" />
+                <ScalarProperty Name="SKU_ENABLE" ColumnName="SKU_ENABLE" />
+                <ScalarProperty Name="SKU_P_ENABLE" ColumnName="SKU_P_ENABLE" />
+                <ScalarProperty Name="SKU_MIN_QTY" ColumnName="SKU_MIN_QTY" />
+                <ScalarProperty Name="SKU_MAX_QTY" ColumnName="SKU_MAX_QTY" />
+                <ScalarProperty Name="SKU_MIN_ORDER" ColumnName="SKU_MIN_ORDER" />
+                <ScalarProperty Name="SKU_MAX_ORDER" ColumnName="SKU_MAX_ORDER" />
+                <ScalarProperty Name="SKU_LEAD_TIME" ColumnName="SKU_LEAD_TIME" />
+                <ScalarProperty Name="SKU_SATISFY" ColumnName="SKU_SATISFY" />
+                <ScalarProperty Name="SKU_SAFTY" ColumnName="SKU_SAFTY" />
+                <ScalarProperty Name="SKU_FREQUENCY" ColumnName="SKU_FREQUENCY" />
+                <ScalarProperty Name="SKU_ACCESS" ColumnName="SKU_ACCESS" />
+                <ScalarProperty Name="SKU_ABC" ColumnName="SKU_ABC" />
+                <ScalarProperty Name="SKU_EOQ_A" ColumnName="SKU_EOQ_A" />
+                <ScalarProperty Name="SKU_EOQ_P" ColumnName="SKU_EOQ_P" />
+                <ScalarProperty Name="SKU_EOQ_C" ColumnName="SKU_EOQ_C" />
+                <ScalarProperty Name="SKU_EOQ_NO" ColumnName="SKU_EOQ_NO" />
+                <ScalarProperty Name="SKU_SPEC" ColumnName="SKU_SPEC" />
+                <ScalarProperty Name="SKU_USAGE" ColumnName="SKU_USAGE" />
+                <ScalarProperty Name="SKU_REMARK" ColumnName="SKU_REMARK" />
+                <ScalarProperty Name="SKU_LAST_O" ColumnName="SKU_LAST_O" />
+                <ScalarProperty Name="SKU_LAST_R" ColumnName="SKU_LAST_R" />
+                <ScalarProperty Name="SKU_LAST_RCOST" ColumnName="SKU_LAST_RCOST" />
+                <ScalarProperty Name="SKU_LAST_RQTY" ColumnName="SKU_LAST_RQTY" />
+                <ScalarProperty Name="SKU_LAST_COMMIT" ColumnName="SKU_LAST_COMMIT" />
+                <ScalarProperty Name="SKU_SENSITIVITY" ColumnName="SKU_SENSITIVITY" />
+                <ScalarProperty Name="SKU_SENS_POS" ColumnName="SKU_SENS_POS" />
+                <ScalarProperty Name="SKU_LAST_UBCOST" ColumnName="SKU_LAST_UBCOST" />
+                <ScalarProperty Name="SKU_LAST_UCCOST" ColumnName="SKU_LAST_UCCOST" />
+                <ScalarProperty Name="SKU_ALERT" ColumnName="SKU_ALERT" />
+                <ScalarProperty Name="SKU_ALERT_MSG" ColumnName="SKU_ALERT_MSG" />
+                <ScalarProperty Name="SKU_PRICE" ColumnName="SKU_PRICE" />
+                <ScalarProperty Name="SKU_EQ_FACTOR" ColumnName="SKU_EQ_FACTOR" />
+                <ScalarProperty Name="SKU_EQ_NAME" ColumnName="SKU_EQ_NAME" />
+                <ScalarProperty Name="SKU_UDF_1" ColumnName="SKU_UDF_1" />
+                <ScalarProperty Name="SKU_UDF_2" ColumnName="SKU_UDF_2" />
+                <ScalarProperty Name="SKU_UDF_3" ColumnName="SKU_UDF_3" />
+                <ScalarProperty Name="SKU_UDF_4" ColumnName="SKU_UDF_4" />
+                <ScalarProperty Name="SKU_UDF_5" ColumnName="SKU_UDF_5" />
+                <ScalarProperty Name="SKU_UDF_6" ColumnName="SKU_UDF_6" />
+                <ScalarProperty Name="SKU_LASTUPD" ColumnName="SKU_LASTUPD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
