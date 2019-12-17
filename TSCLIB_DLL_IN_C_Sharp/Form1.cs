@@ -15,6 +15,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
     public partial class Form1 : Form
     {
         /*
+         * XXXXX
         SqlDataAdapter adpt;
         DataTable dt;
         DbEntities db;
