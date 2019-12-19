@@ -1,6 +1,6 @@
 ﻿namespace TSCLIB_DLL_IN_C_Sharp
 {
-    partial class Form1
+    partial class BarcodeTSC
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -34,6 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.txtProduct = new System.Windows.Forms.TextBox();
+            this.sKUMASTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hYDataSet = new TSCLIB_DLL_IN_C_Sharp.HYDataSet();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.showBarcode = new System.Windows.Forms.Button();
@@ -54,25 +56,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.laTotal_price = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button_Connect = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label_Test = new System.Windows.Forms.Label();
-            this.hYDataSet = new TSCLIB_DLL_IN_C_Sharp.HYDataSet();
-            this.sKUMASTERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sKUMASTERTableAdapter = new TSCLIB_DLL_IN_C_Sharp.HYDataSetTableAdapters.SKUMASTERTableAdapter();
             this.tableAdapterManager = new TSCLIB_DLL_IN_C_Sharp.HYDataSetTableAdapters.TableAdapterManager();
-            this.sKUMASTERDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sKUMASTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -129,8 +119,17 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(295, 34);
             this.txtProduct.TabIndex = 7;
-            this.txtProduct.Text = "น้ำส้ม";
             this.txtProduct.TextChanged += new System.EventHandler(this.txtProduct_TextChanged);
+            // 
+            // sKUMASTERBindingSource
+            // 
+            this.sKUMASTERBindingSource.DataMember = "SKUMASTER";
+            this.sKUMASTERBindingSource.DataSource = this.hYDataSet;
+            // 
+            // hYDataSet
+            // 
+            this.hYDataSet.DataSetName = "HYDataSet";
+            this.hYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtQty
             // 
@@ -241,7 +240,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(73, 378);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 299);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(313, 275);
             this.pictureBox1.TabIndex = 20;
@@ -250,7 +249,7 @@
             // pic
             // 
             this.pic.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pic.Location = new System.Drawing.Point(149, 433);
+            this.pic.Location = new System.Drawing.Point(186, 354);
             this.pic.Name = "pic";
             this.pic.Size = new System.Drawing.Size(148, 117);
             this.pic.TabIndex = 21;
@@ -261,7 +260,7 @@
             this.laProduct.AutoSize = true;
             this.laProduct.BackColor = System.Drawing.SystemColors.Window;
             this.laProduct.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laProduct.Location = new System.Drawing.Point(144, 407);
+            this.laProduct.Location = new System.Drawing.Point(181, 328);
             this.laProduct.Name = "laProduct";
             this.laProduct.Size = new System.Drawing.Size(55, 26);
             this.laProduct.TabIndex = 22;
@@ -272,7 +271,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.Window;
             this.label7.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(130, 531);
+            this.label7.Location = new System.Drawing.Point(167, 452);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 26);
             this.label7.TabIndex = 23;
@@ -283,7 +282,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.Window;
             this.label8.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(254, 531);
+            this.label8.Location = new System.Drawing.Point(291, 452);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 26);
             this.label8.TabIndex = 24;
@@ -294,7 +293,7 @@
             this.laQty.AutoSize = true;
             this.laQty.BackColor = System.Drawing.SystemColors.Window;
             this.laQty.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laQty.Location = new System.Drawing.Point(303, 549);
+            this.laQty.Location = new System.Drawing.Point(340, 470);
             this.laQty.Name = "laQty";
             this.laQty.Size = new System.Drawing.Size(18, 26);
             this.laQty.TabIndex = 25;
@@ -305,7 +304,7 @@
             this.laPrice.AutoSize = true;
             this.laPrice.BackColor = System.Drawing.SystemColors.Window;
             this.laPrice.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laPrice.Location = new System.Drawing.Point(148, 549);
+            this.laPrice.Location = new System.Drawing.Point(185, 470);
             this.laPrice.Name = "laPrice";
             this.laPrice.Size = new System.Drawing.Size(21, 26);
             this.laPrice.TabIndex = 26;
@@ -316,7 +315,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Window;
             this.label9.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(161, 569);
+            this.label9.Location = new System.Drawing.Point(198, 490);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 26);
             this.label9.TabIndex = 27;
@@ -327,7 +326,7 @@
             this.laTotal_price.AutoSize = true;
             this.laTotal_price.BackColor = System.Drawing.SystemColors.Window;
             this.laTotal_price.Font = new System.Drawing.Font("AngsanaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laTotal_price.Location = new System.Drawing.Point(222, 569);
+            this.laTotal_price.Location = new System.Drawing.Point(259, 490);
             this.laTotal_price.Name = "laTotal_price";
             this.laTotal_price.Size = new System.Drawing.Size(31, 29);
             this.laTotal_price.TabIndex = 28;
@@ -338,57 +337,11 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Window;
             this.label10.Font = new System.Drawing.Font("AngsanaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(269, 569);
+            this.label10.Location = new System.Drawing.Point(306, 490);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(25, 29);
             this.label10.TabIndex = 29;
             this.label10.Text = "บ.";
-            // 
-            // button_Connect
-            // 
-            this.button_Connect.Location = new System.Drawing.Point(13, 209);
-            this.button_Connect.Name = "button_Connect";
-            this.button_Connect.Size = new System.Drawing.Size(109, 38);
-            this.button_Connect.TabIndex = 30;
-            this.button_Connect.Text = "Connect";
-            this.button_Connect.UseVisualStyleBackColor = true;
-            this.button_Connect.Click += new System.EventHandler(this.button_Connect_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(701, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 52);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "ViewDatabase";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // label_Test
-            // 
-            this.label_Test.AutoSize = true;
-            this.label_Test.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Test.Location = new System.Drawing.Point(69, 319);
-            this.label_Test.Name = "label_Test";
-            this.label_Test.Size = new System.Drawing.Size(78, 26);
-            this.label_Test.TabIndex = 33;
-            this.label_Test.Text = "...........";
-            // 
-            // hYDataSet
-            // 
-            this.hYDataSet.DataSetName = "HYDataSet";
-            this.hYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sKUMASTERBindingSource1
-            // 
-            this.sKUMASTERBindingSource1.DataMember = "SKUMASTER";
-            this.sKUMASTERBindingSource1.DataSource = this.hYDataSet;
             // 
             // sKUMASTERTableAdapter
             // 
@@ -400,68 +353,28 @@
             this.tableAdapterManager.SKUMASTERTableAdapter = this.sKUMASTERTableAdapter;
             this.tableAdapterManager.UpdateOrder = TSCLIB_DLL_IN_C_Sharp.HYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // sKUMASTERDataGridView
+            // button2
             // 
-            this.sKUMASTERDataGridView.AllowUserToAddRows = false;
-            this.sKUMASTERDataGridView.AllowUserToDeleteRows = false;
-            this.sKUMASTERDataGridView.AutoGenerateColumns = false;
-            this.sKUMASTERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sKUMASTERDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5});
-            this.sKUMASTERDataGridView.DataSource = this.sKUMASTERBindingSource1;
-            this.sKUMASTERDataGridView.Location = new System.Drawing.Point(548, 151);
-            this.sKUMASTERDataGridView.Name = "sKUMASTERDataGridView";
-            this.sKUMASTERDataGridView.ReadOnly = true;
-            this.sKUMASTERDataGridView.RowHeadersVisible = false;
-            this.sKUMASTERDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sKUMASTERDataGridView.Size = new System.Drawing.Size(441, 220);
-            this.sKUMASTERDataGridView.TabIndex = 33;
+            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(197, 603);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 43);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "SKU_KEY";
-            this.dataGridViewTextBoxColumn1.HeaderText = "SKU_KEY";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "SKU_CODE";
-            this.dataGridViewTextBoxColumn2.HeaderText = "SKU_CODE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SKU_NAME";
-            this.dataGridViewTextBoxColumn3.HeaderText = "SKU_NAME";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "SKU_BARCODE";
-            this.dataGridViewTextBoxColumn5.HeaderText = "SKU_BARCODE";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // sKUMASTERBindingSource
-            // 
-            this.sKUMASTERBindingSource.DataSource = typeof(TSCLIB_DLL_IN_C_Sharp.SKUMASTER);
-            // 
-            // Form1
+            // BarcodeTSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(1074, 684);
-            this.Controls.Add(this.sKUMASTERDataGridView);
-            this.Controls.Add(this.label_Test);
+            this.ClientSize = new System.Drawing.Size(550, 684);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button_Connect);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.laTotal_price);
             this.Controls.Add(this.label9);
@@ -486,16 +399,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "BarcodeTSC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barcode TSC Printer";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,19 +439,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label laTotal_price;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button_Connect;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label_Test;
-        private System.Windows.Forms.BindingSource sKUMASTERBindingSource;
         private HYDataSet hYDataSet;
-        private System.Windows.Forms.BindingSource sKUMASTERBindingSource1;
+        private System.Windows.Forms.BindingSource sKUMASTERBindingSource;
         private HYDataSetTableAdapters.SKUMASTERTableAdapter sKUMASTERTableAdapter;
         private HYDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView sKUMASTERDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button button2;
     }
 }
 

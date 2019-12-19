@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 public class TSCLIB
 {
@@ -70,7 +68,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new BarcodeTSC());
         }
     }
 }

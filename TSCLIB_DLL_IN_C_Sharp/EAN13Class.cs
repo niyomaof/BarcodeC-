@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 
@@ -27,7 +24,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
                     checkSum += Convert.ToInt32(chaine.Substring(i, 1));
                 }
                 checkSum *= 3;
-                for(i = 0; i < 17; i += 2)
+                for (i = 0; i < 17; i += 2)
                 {
                     checkSum += Convert.ToInt32(chaine.Substring(i, 1));
                 }
@@ -40,7 +37,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
                 {
                     tableA = false;
 
-                    switch(i)
+                    switch (i)
                     {
                         case 2:
                             if (first >= 0 && first <= 3) tableA = true;
