@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\NiyomPC\Desktop\barcode\TSCLIB.DLL_VCsharpActiveX_Example\VCsharpActiveX_Example\TSCLIB_DLL_IN_VCsharp_2005\TSCLIB_DLL_IN_C_Sharp\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\NiyomPC\Desktop\barcode\TSCLIB.DLL_VCsharpActiveX_Example\VCsharpActiveX_Example\BarcodeCsharp\TSCLIB_DLL_IN_C_Sharp\Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
