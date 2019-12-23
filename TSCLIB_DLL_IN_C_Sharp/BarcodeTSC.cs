@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -6,14 +7,8 @@ using ZXing;
 
 namespace TSCLIB_DLL_IN_C_Sharp
 {
-    public partial class BarcodeTSC : Form
+    public partial class BarcodeTSC : MaterialSkin.Controls.MaterialForm
     {
-        /*
-         * XXXXX
-        SqlDataAdapter adpt;
-        DataTable dt;
-        DbEntities db;
-        */
         private static BarcodeTSC _instance;
         public static BarcodeTSC Instance
         {
@@ -28,17 +23,12 @@ namespace TSCLIB_DLL_IN_C_Sharp
         public BarcodeTSC()
         {
             InitializeComponent();
-            showdata();
-        }
+            var skinManager = MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
-        public void showdata()
-        {
-            /*adpt = new SqlDataAdapter("select * from SKUMASTER", );
-            dt = new DataTable();
-            adpt.Fill(dt);
-            dgv1.DataSource = dt;*/
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -80,12 +70,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
                 TSCLIB_DLL.ActiveXsendcommand("DENSITY 12");
                 TSCLIB_DLL.ActiveXsendcommand("SET TEAR ON");
                 TSCLIB_DLL.ActiveXclearbuffer();
-
-                //TSCLIB_DLL.ActiveXprinterfont("300", "150", "3", "0", "1", "1", "X3 น้ำเปล่า 3X");
-                //TSCLIB_DLL.ActiveXwindowsfont(20, 100, 50, 0, 0, 0, "AngsanaUPC", "A1 กระดาษ A1");
-                //TSCLIB_DLL.ActiveXwindowsfont(20, 100, 50, 0, 0, 0, "Tahoma", "A1 กระดาษ A1");
-                //TSCLIB_DLL.ActiveXdownloadpcx("UL.PCX", "UL.PCX");
-                //TSCLIB_DLL.ActiveXsendcommand("PUTPCX 100,400,\"UL.PCX\"");
 
                 //|| ใบที่ 1
                 TSCLIB_DLL.ActiveXwindowsfont(80, 30, 35, 0, 0, 0, "AngsanaUPC", product);
@@ -168,8 +152,25 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         ChangeTextColor.ChangeColor(richTextBox1, intStart);
                     }
                 }
+                else if (txtPrice.Text == "" && txtQty.Text != "")
+                {
+                    string price = txtPrice.Text;
+                    //double prices = double.Parse(price);
+                    string txtBar = txtBarcode.Text + price.ToString();
+                    Check12Digits = txtBar.PadRight(17, '0');
+                    Barrcode = EAN13Class.EAN13(Check12Digits);
+                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                    {
+                        richTextBox1.Text.ToString();
+                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                    }
+                }
                 else
                 {
+
                     string qty = txtQty.Text;
                     string price = txtPrice.Text;
                     double qtys = double.Parse(qty);
@@ -820,23 +821,26 @@ namespace TSCLIB_DLL_IN_C_Sharp
             string bar = txtBarcode.Text;
             ConnectDB db = new ConnectDB();
             SqlConnection conn = db.connect();
-            SqlCommand cmdDataBase = new SqlCommand("SELECT SKU_BARCODE,SKU_NAME,SKU_STD_COST FROM SKUMASTER WHERE SKU_BARCODE = '"+bar+"'", conn);
+            SqlCommand cmdDataBase = new SqlCommand("SELECT SKU_BARCODE,SKU_NAME,SKU_STD_COST FROM SKUMASTER WHERE SKU_BARCODE = '" + bar + "'", conn);
             try
             {
                 SqlDataReader reader = cmdDataBase.ExecuteReader();
                 while (reader.Read())
                 {
-                    Console.WriteLine("SKU_BARCODE: " + reader["SKU_BARCODE"] + " " + reader["SKU_NAME"]+" "+ reader["SKU_STD_COST"]);
                     txtBarcode.Text = reader["SKU_BARCODE"].ToString();
                     txtProduct.Text = reader["SKU_NAME"].ToString();
                     txtPrice.Text = reader["SKU_STD_COST"].ToString();
-
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

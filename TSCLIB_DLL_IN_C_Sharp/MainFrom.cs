@@ -8,14 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MaterialSkin;
 
 namespace TSCLIB_DLL_IN_C_Sharp
 {
-    public partial class MainFrom : Form
+    public partial class MainFrom : MaterialSkin.Controls.MaterialForm
     {
         public MainFrom()
         {
             InitializeComponent();
+            var skinManager = MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -105,9 +110,29 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
             string[] lines = { ip, db, user, password, port };
             System.IO.File.WriteAllLines(@"C:\Users\Public\connect.txt", lines);
-            Console.WriteLine("Save Lines" + lines);
             string save = "Save Succeed";
             la_Save.Text = save;
+        }
+
+        private void materialFlatButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            {
+                string ip = txtIP.Text;
+                string db = txtDbName.Text;
+                string user = txtUser.Text;
+                string password = txtPassword.Text;
+                string port = txtPort.Text;
+
+                string[] lines = { ip, db, user, password, port };
+                System.IO.File.WriteAllLines(@"C:\Users\Public\connect.txt", lines);
+                string save = "Save Succeed";
+                la_Save.Text = save;
+            }
         }
     }
 }

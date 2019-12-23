@@ -14,8 +14,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
             try
             {
                 string connetionString = @"Data Source=" + host.Trim() + "," + port.Trim() + ";Initial Catalog=" + db.Trim() + ";User ID=" + user.Trim() + ";Password=" + password.Trim() + "";
-                //string connetionString = @"Data Source=103.47.87.157,1433;Initial Catalog=HY;User ID=sa;Password=ITsin@123";
-                Console.WriteLine(connetionString);
                 SqlConnection conn = new SqlConnection(connetionString);
                 conn.Open();
                 return conn;
@@ -36,7 +34,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
                 string[] xx = text.Split(s);
 
                 string connetionString = @"Data Source=" + xx[0].Trim() + "," + xx[4].Trim() + ";Initial Catalog=" + xx[1].Trim() + ";User ID=" + xx[2].Trim() + ";Password=" + xx[3].Trim() + "";
-                Console.WriteLine(connetionString);
                 SqlConnection conn = new SqlConnection(connetionString);
                 conn.Open();
                 return conn;
