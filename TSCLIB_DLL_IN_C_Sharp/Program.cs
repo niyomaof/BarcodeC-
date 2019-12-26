@@ -63,9 +63,13 @@ namespace TSCLIB_DLL_IN_C_Sharp
         [STAThread]
         static void Main()
         {
+            //ZTest zTest = new ZTest();
+            //zTest.test();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainFrom());
+           
         }
     }
 }

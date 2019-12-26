@@ -126,75 +126,142 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            string Barrcode, Check12Digits, Check12Digits2, Check12Digits3;
-            if (txtBarcode.Text != "")
+            try
             {
-                if (txtQty.Text == "" && txtPrice.Text == "")
+                string Barrcode, Check12Digits, Check12Digits2, Check12Digits3;
+                if (txtBarcode.Text != "")
                 {
-                    string txtBar = txtBarcode.Text;
-                    Check12Digits = txtBar.PadRight(17, '0');
-                    Barrcode = EAN13Class.EAN13(Check12Digits);
-                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                    if (txtQty.Text == "" && txtPrice.Text == "")
                     {
-                        richTextBox1.Text.ToString();
-                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                    }
-                }
-                else if (txtPrice.Text != "" && txtQty.Text == "")
-                {
-                    string price = txtPrice.Text;
-                    double prices = double.Parse(price);
-                    string txtBar = txtBarcode.Text + prices.ToString();
-                    Check12Digits = txtBar.PadRight(17, '0');
-                    Barrcode = EAN13Class.EAN13(Check12Digits);
-                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                    {
-                        richTextBox1.Text.ToString();
-                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                    }
-                }
-                else if (txtPrice.Text == "" && txtQty.Text != "")
-                {
-                    string price = txtPrice.Text;
-                    string txtBar = txtBarcode.Text + price.ToString();
-                    Check12Digits = txtBar.PadRight(17, '0');
-                    Barrcode = EAN13Class.EAN13(Check12Digits);
-                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                    {
-                        richTextBox1.Text.ToString();
-                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                    }
-                }
-                else
-                {
-                    string qty = txtQty.Text;
-                    string price = txtPrice.Text;
-                    double qtys = double.Parse(qty);
-                    double prices = double.Parse(price);
-                    double total_price;
-                    total_price = qtys * prices;
-                    string qtySplit = qty.ToString();
-                    string total_priceSplit = total_price.ToString();
-
-                    char[] spearator = { '.' };
-
-                    String[] qtySplitShow = qtySplit.Split(spearator);
-                    String[] total_priceSplitShow = total_priceSplit.Split(spearator);
-
-                    if (qtySplitShow.Length == 1)
-                    {
-                        if (total_priceSplitShow.Length == 1)
+                        string txtBar = txtBarcode.Text;
+                        Check12Digits = txtBar.PadRight(17, '0');
+                        Barrcode = EAN13Class.EAN13(Check12Digits);
+                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
                         {
-                            string showQty = (qtySplitShow[0]);
+                            richTextBox1.Text.ToString();
+                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                        }
+                    }
+                    else if (txtPrice.Text != "" && txtQty.Text == "")
+                    {
+                        string price = txtPrice.Text;
+                        double prices = double.Parse(price);
+                        string txtBar = txtBarcode.Text + prices.ToString();
+                        Check12Digits = txtBar.PadRight(17, '0');
+                        Barrcode = EAN13Class.EAN13(Check12Digits);
+                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                        {
+                            richTextBox1.Text.ToString();
+                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                        }
+                    }
+                    else if (txtPrice.Text == "" && txtQty.Text != "")
+                    {
+                        string price = txtPrice.Text;
+                        string txtBar = txtBarcode.Text + price.ToString();
+                        Check12Digits = txtBar.PadRight(17, '0');
+                        Barrcode = EAN13Class.EAN13(Check12Digits);
+                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                        {
+                            richTextBox1.Text.ToString();
+                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                        }
+                    }
+                    else
+                    {
+                        string qty = txtQty.Text;
+                        string price = txtPrice.Text;
+                        double qtys = double.Parse(qty);
+                        double prices = double.Parse(price);
+                        double total_price;
+                        total_price = qtys * prices;
+                        string qtySplit = qty.ToString();
+                        string total_priceSplit = total_price.ToString();
+
+                        char[] spearator = { '.' };
+
+                        String[] qtySplitShow = qtySplit.Split(spearator);
+                        String[] total_priceSplitShow = total_priceSplit.Split(spearator);
+
+                        if (qtySplitShow.Length == 1)
+                        {
+                            if (total_priceSplitShow.Length == 1)
+                            {
+                                string showQty = (qtySplitShow[0]);
+                                string showTotal_price = (total_priceSplitShow[0]);
+
+                                string txtBars = txtBarcode.Text;
+                                string txtQty = showQty.ToString();
+                                string txtTotal = showTotal_price.ToString();
+                                Check12Digits = txtBars.PadRight(17, '0');
+                                Check12Digits2 = txtQty.PadRight(17, '0');
+                                Check12Digits3 = txtTotal.PadRight(17, '0');
+
+                                int startIndex = 0;
+                                int length = 6;
+                                int startIndex5 = 0;
+                                int length5 = 5;
+                                String substring1 = Check12Digits.Substring(startIndex, length);
+                                String substring2 = Check12Digits2.Substring(startIndex5, length5);
+                                String substring3 = Check12Digits3.Substring(startIndex, length);
+
+                                string txtBar = substring1 + substring3 + substring2;
+                                Check12Digits = txtBar.PadRight(17, '0');
+                                Barrcode = EAN13Class.EAN13(Check12Digits);
+                                if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                                {
+                                    richTextBox1.Text.ToString();
+                                    richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                                    Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                                    ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                                }
+                            }
+                            else
+                            {
+                                string showQty = (qtySplitShow[0]);
+                                string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
+
+                                string txtBars = txtBarcode.Text;
+                                string txtQty = showQty.ToString();
+                                string txtTotal = showTotal_price.ToString();
+                                Check12Digits = txtBars.PadRight(17, '0');
+                                Check12Digits2 = txtQty.PadRight(17, '0');
+                                Check12Digits3 = txtTotal.PadRight(17, '0');
+
+                                int startIndex = 0;
+                                int length = 6;
+                                int startIndex5 = 0;
+                                int length5 = 5;
+                                String substring1 = Check12Digits.Substring(startIndex, length);
+                                String substring2 = Check12Digits2.Substring(startIndex5, length5);
+                                String substring3 = Check12Digits3.Substring(startIndex, length);
+
+                                string txtBar = substring1 + substring3 + substring2;
+                                Check12Digits = txtBar.PadRight(17, '0');
+                                Barrcode = EAN13Class.EAN13(Check12Digits);
+                                if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                                {
+                                    richTextBox1.Text.ToString();
+                                    richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                                    Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                                    ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                                }
+                            }
+                        }
+                        else if (total_priceSplitShow.Length == 1)
+                        {
+                            string showQty = (qtySplitShow[0] + qtySplitShow[1]);
                             string showTotal_price = (total_priceSplitShow[0]);
 
                             string txtBars = txtBarcode.Text;
@@ -226,7 +293,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         }
                         else
                         {
-                            string showQty = (qtySplitShow[0]);
+                            string showQty = (qtySplitShow[0] + qtySplitShow[1]);
                             string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
 
                             string txtBars = txtBarcode.Text;
@@ -257,71 +324,11 @@ namespace TSCLIB_DLL_IN_C_Sharp
                             }
                         }
                     }
-                    else if (total_priceSplitShow.Length == 1)
-                    {
-                        string showQty = (qtySplitShow[0] + qtySplitShow[1]);
-                        string showTotal_price = (total_priceSplitShow[0]);
-
-                        string txtBars = txtBarcode.Text;
-                        string txtQty = showQty.ToString();
-                        string txtTotal = showTotal_price.ToString();
-                        Check12Digits = txtBars.PadRight(17, '0');
-                        Check12Digits2 = txtQty.PadRight(17, '0');
-                        Check12Digits3 = txtTotal.PadRight(17, '0');
-
-                        int startIndex = 0;
-                        int length = 6;
-                        int startIndex5 = 0;
-                        int length5 = 5;
-                        String substring1 = Check12Digits.Substring(startIndex, length);
-                        String substring2 = Check12Digits2.Substring(startIndex5, length5);
-                        String substring3 = Check12Digits3.Substring(startIndex, length);
-
-                        string txtBar = substring1 + substring3 + substring2;
-                        Check12Digits = txtBar.PadRight(17, '0');
-                        Barrcode = EAN13Class.EAN13(Check12Digits);
-                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                        {
-                            richTextBox1.Text.ToString();
-                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                        }
-                    }
-                    else
-                    {
-                        string showQty = (qtySplitShow[0] + qtySplitShow[1]);
-                        string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
-
-                        string txtBars = txtBarcode.Text;
-                        string txtQty = showQty.ToString();
-                        string txtTotal = showTotal_price.ToString();
-                        Check12Digits = txtBars.PadRight(17, '0');
-                        Check12Digits2 = txtQty.PadRight(17, '0');
-                        Check12Digits3 = txtTotal.PadRight(17, '0');
-
-                        int startIndex = 0;
-                        int length = 6;
-                        int startIndex5 = 0;
-                        int length5 = 5;
-                        String substring1 = Check12Digits.Substring(startIndex, length);
-                        String substring2 = Check12Digits2.Substring(startIndex5, length5);
-                        String substring3 = Check12Digits3.Substring(startIndex, length);
-
-                        string txtBar = substring1 + substring3 + substring2;
-                        Check12Digits = txtBar.PadRight(17, '0');
-                        Barrcode = EAN13Class.EAN13(Check12Digits);
-                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                        {
-                            richTextBox1.Text.ToString();
-                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                        }
-                    }
                 }
+            }
+            catch
+            {
+
             }
         }
 
@@ -653,7 +660,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
                     }
                     else
                     {
-                        txtQty.Text = bin_strng.Substring(0, str_length - 1);
                         Console.WriteLine("S02 = " + bin_strng);
                         txtQty.Text = bin_strng;
                     }
@@ -667,76 +673,142 @@ namespace TSCLIB_DLL_IN_C_Sharp
                 }
             } 
             */
-
-            string Barrcode, Check12Digits, Check12Digits2, Check12Digits3;
-            if (txtBarcode.Text != "")
+            try
             {
-                if (txtQty.Text == "" && txtPrice.Text == "")
+                string Barrcode, Check12Digits, Check12Digits2, Check12Digits3;
+                if (txtBarcode.Text != "")
                 {
-                    string txtBar = txtBarcode.Text;
-                    Check12Digits = txtBar.PadRight(17, '0');
-                    Barrcode = EAN13Class.EAN13(Check12Digits);
-                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                    if (txtQty.Text == "" && txtPrice.Text == "")
                     {
-                        richTextBox1.Text.ToString();
-                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                    }
-                }
-                else if (txtPrice.Text != "" && txtQty.Text == "")
-                {
-                    string price = txtPrice.Text;
-                    double prices = double.Parse(price);
-                    string txtBar = txtBarcode.Text + prices.ToString();
-                    Check12Digits = txtBar.PadRight(17, '0');
-                    Barrcode = EAN13Class.EAN13(Check12Digits);
-                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                    {
-                        richTextBox1.Text.ToString();
-                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                    }
-                }
-                else if (txtPrice.Text == "" && txtQty.Text != "")
-                {
-                    string price = txtPrice.Text;
-                    string txtBar = txtBarcode.Text + price.ToString();
-                    Check12Digits = txtBar.PadRight(17, '0');
-                    Barrcode = EAN13Class.EAN13(Check12Digits);
-                    if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                    {
-                        richTextBox1.Text.ToString();
-                        richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                        Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                        ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                    }
-                }
-                else
-                {
-                    string qty = txtQty.Text;
-                    string price = txtPrice.Text;
-                    double qtys = double.Parse(qty);
-                    double prices = double.Parse(price);
-                    double total_price;
-                    total_price = qtys * prices;
-                    string qtySplit = qty.ToString();
-                    string total_priceSplit = total_price.ToString();
-
-                    char[] spearator = { '.' };
-
-                    String[] qtySplitShow = qtySplit.Split(spearator);
-                    String[] total_priceSplitShow = total_priceSplit.Split(spearator);
-
-                    if (qtySplitShow.Length == 1)
-                    {
-                        if (total_priceSplitShow.Length == 1)
+                        string txtBar = txtBarcode.Text;
+                        Check12Digits = txtBar.PadRight(17, '0');
+                        Barrcode = EAN13Class.EAN13(Check12Digits);
+                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
                         {
-                            string showQty = (qtySplitShow[0]);
+                            richTextBox1.Text.ToString();
+                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                        }
+                    }
+                    else if (txtPrice.Text != "" && txtQty.Text == "")
+                    {
+                        string price = txtPrice.Text;
+                        double prices = double.Parse(price);
+                        string txtBar = txtBarcode.Text + prices.ToString();
+                        Check12Digits = txtBar.PadRight(17, '0');
+                        Barrcode = EAN13Class.EAN13(Check12Digits);
+                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                        {
+                            richTextBox1.Text.ToString();
+                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                        }
+                    }
+                    else if (txtPrice.Text == "" && txtQty.Text != "")
+                    {
+                        string price = txtPrice.Text;
+                        string txtBar = txtBarcode.Text + price.ToString();
+                        Check12Digits = txtBar.PadRight(17, '0');
+                        Barrcode = EAN13Class.EAN13(Check12Digits);
+                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                        {
+                            richTextBox1.Text.ToString();
+                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                        }
+                    }
+                    else
+                    {
+                        string qty = txtQty.Text;
+                        string price = txtPrice.Text;
+                        double qtys = double.Parse(qty);
+                        double prices = double.Parse(price);
+                        double total_price;
+                        total_price = qtys * prices;
+                        string qtySplit = qty.ToString();
+                        string total_priceSplit = total_price.ToString();
+
+                        char[] spearator = { '.' };
+
+                        String[] qtySplitShow = qtySplit.Split(spearator);
+                        String[] total_priceSplitShow = total_priceSplit.Split(spearator);
+
+                        if (qtySplitShow.Length == 1)
+                        {
+                            if (total_priceSplitShow.Length == 1)
+                            {
+                                string showQty = (qtySplitShow[0]);
+                                string showTotal_price = (total_priceSplitShow[0]);
+
+                                string txtBars = txtBarcode.Text;
+                                string txtQty = showQty.ToString();
+                                string txtTotal = showTotal_price.ToString();
+                                Check12Digits = txtBars.PadRight(17, '0');
+                                Check12Digits2 = txtQty.PadRight(17, '0');
+                                Check12Digits3 = txtTotal.PadRight(17, '0');
+
+                                int startIndex = 0;
+                                int length = 6;
+                                int startIndex5 = 0;
+                                int length5 = 5;
+                                String substring1 = Check12Digits.Substring(startIndex, length);
+                                String substring2 = Check12Digits2.Substring(startIndex5, length5);
+                                String substring3 = Check12Digits3.Substring(startIndex, length);
+
+                                string txtBar = substring1 + substring3 + substring2;
+                                Check12Digits = txtBar.PadRight(17, '0');
+                                Barrcode = EAN13Class.EAN13(Check12Digits);
+                                if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                                {
+                                    richTextBox1.Text.ToString();
+                                    richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                                    Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                                    ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                                }
+                            }
+                            else
+                            {
+                                string showQty = (qtySplitShow[0]);
+                                string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
+
+                                string txtBars = txtBarcode.Text;
+                                string txtQty = showQty.ToString();
+                                string txtTotal = showTotal_price.ToString();
+                                Check12Digits = txtBars.PadRight(17, '0');
+                                Check12Digits2 = txtQty.PadRight(17, '0');
+                                Check12Digits3 = txtTotal.PadRight(17, '0');
+
+                                int startIndex = 0;
+                                int length = 6;
+                                int startIndex5 = 0;
+                                int length5 = 5;
+                                String substring1 = Check12Digits.Substring(startIndex, length);
+                                String substring2 = Check12Digits2.Substring(startIndex5, length5);
+                                String substring3 = Check12Digits3.Substring(startIndex, length);
+
+                                string txtBar = substring1 + substring3 + substring2;
+                                Check12Digits = txtBar.PadRight(17, '0');
+                                Barrcode = EAN13Class.EAN13(Check12Digits);
+                                if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
+                                {
+                                    richTextBox1.Text.ToString();
+                                    richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
+
+                                    Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
+                                    ChangeTextColor.ChangeColor(richTextBox1, intStart);
+                                }
+                            }
+                        }
+                        else if (total_priceSplitShow.Length == 1)
+                        {
+                            string showQty = (qtySplitShow[0] + qtySplitShow[1]);
                             string showTotal_price = (total_priceSplitShow[0]);
 
                             string txtBars = txtBarcode.Text;
@@ -768,7 +840,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         }
                         else
                         {
-                            string showQty = (qtySplitShow[0]);
+                            string showQty = (qtySplitShow[0] + qtySplitShow[1]);
                             string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
 
                             string txtBars = txtBarcode.Text;
@@ -799,72 +871,13 @@ namespace TSCLIB_DLL_IN_C_Sharp
                             }
                         }
                     }
-                    else if (total_priceSplitShow.Length == 1)
-                    {
-                        string showQty = (qtySplitShow[0] + qtySplitShow[1]);
-                        string showTotal_price = (total_priceSplitShow[0]);
-
-                        string txtBars = txtBarcode.Text;
-                        string txtQty = showQty.ToString();
-                        string txtTotal = showTotal_price.ToString();
-                        Check12Digits = txtBars.PadRight(17, '0');
-                        Check12Digits2 = txtQty.PadRight(17, '0');
-                        Check12Digits3 = txtTotal.PadRight(17, '0');
-
-                        int startIndex = 0;
-                        int length = 6;
-                        int startIndex5 = 0;
-                        int length5 = 5;
-                        String substring1 = Check12Digits.Substring(startIndex, length);
-                        String substring2 = Check12Digits2.Substring(startIndex5, length5);
-                        String substring3 = Check12Digits3.Substring(startIndex, length);
-
-                        string txtBar = substring1 + substring3 + substring2;
-                        Check12Digits = txtBar.PadRight(17, '0');
-                        Barrcode = EAN13Class.EAN13(Check12Digits);
-                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                        {
-                            richTextBox1.Text.ToString();
-                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                        }
-                    }
-                    else
-                    {
-                        string showQty = (qtySplitShow[0] + qtySplitShow[1]);
-                        string showTotal_price = (total_priceSplitShow[0] + total_priceSplitShow[1]);
-
-                        string txtBars = txtBarcode.Text;
-                        string txtQty = showQty.ToString();
-                        string txtTotal = showTotal_price.ToString();
-                        Check12Digits = txtBars.PadRight(17, '0');
-                        Check12Digits2 = txtQty.PadRight(17, '0');
-                        Check12Digits3 = txtTotal.PadRight(17, '0');
-
-                        int startIndex = 0;
-                        int length = 6;
-                        int startIndex5 = 0;
-                        int length5 = 5;
-                        String substring1 = Check12Digits.Substring(startIndex, length);
-                        String substring2 = Check12Digits2.Substring(startIndex5, length5);
-                        String substring3 = Check12Digits3.Substring(startIndex, length);
-
-                        string txtBar = substring1 + substring3 + substring2;
-                        Check12Digits = txtBar.PadRight(17, '0');
-                        Barrcode = EAN13Class.EAN13(Check12Digits);
-                        if (!String.Equals(EAN13Class.Barcode13Digits, "") || (EAN13Class.Barcode13Digits != ""))
-                        {
-                            richTextBox1.Text.ToString();
-                            richTextBox1.Text = EAN13Class.Barcode13Digits.ToString();
-
-                            Int32 intStart = Convert.ToInt32(richTextBox1.TextLength - 1);
-                            ChangeTextColor.ChangeColor(richTextBox1, intStart);
-                        }
-                    }
                 }
             }
+            catch
+            {
+
+            }
+            
         }
 
         private void txtProduct_TextChanged(object sender, EventArgs e)
@@ -912,17 +925,32 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
         private void txtQty_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Char chr = e.KeyChar;
-            if (!Char.IsDigit(chr) && chr != 8 && chr != 46)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
+            if (txtQty.Text != "")
+            {
+                if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+                {
+                    e.Handled = true;
+                }
+            }
+
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Char chr = e.KeyChar;
-            if (!Char.IsDigit(chr) && chr != 8 && chr != 46)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
