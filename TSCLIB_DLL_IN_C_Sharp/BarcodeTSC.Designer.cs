@@ -90,11 +90,14 @@
             this.txtBarcode.Size = new System.Drawing.Size(170, 34);
             this.txtBarcode.TabIndex = 6;
             this.txtBarcode.TextChanged += new System.EventHandler(this.txtBarcode_TextChanged);
+            this.txtBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarcode_KeyPress);
             // 
             // txtProduct
             // 
             this.txtProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProduct.Enabled = false;
             this.txtProduct.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduct.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtProduct.Location = new System.Drawing.Point(71, 94);
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(295, 34);
@@ -119,6 +122,7 @@
             this.txtQty.Size = new System.Drawing.Size(100, 34);
             this.txtQty.TabIndex = 8;
             this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
+            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
             // 
             // txtPrice
             // 
@@ -129,6 +133,7 @@
             this.txtPrice.Size = new System.Drawing.Size(100, 34);
             this.txtPrice.TabIndex = 9;
             this.txtPrice.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // showBarcode
             // 
@@ -153,6 +158,7 @@
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(247, 230);
             this.richTextBox1.MaxLength = 18;
