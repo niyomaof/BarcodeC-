@@ -183,9 +183,9 @@
             // label_Success
             // 
             this.label_Success.AutoSize = true;
-            this.label_Success.BackColor = System.Drawing.SystemColors.Control;
+            this.label_Success.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.label_Success.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Success.ForeColor = System.Drawing.Color.Green;
+            this.label_Success.ForeColor = System.Drawing.Color.Chartreuse;
             this.label_Success.Location = new System.Drawing.Point(289, 362);
             this.label_Success.Name = "label_Success";
             this.label_Success.Size = new System.Drawing.Size(0, 23);
@@ -194,9 +194,9 @@
             // la_Save
             // 
             this.la_Save.AutoSize = true;
-            this.la_Save.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.la_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.la_Save.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.la_Save.ForeColor = System.Drawing.Color.Green;
+            this.la_Save.ForeColor = System.Drawing.Color.Chartreuse;
             this.la_Save.Location = new System.Drawing.Point(167, 505);
             this.la_Save.Name = "la_Save";
             this.la_Save.Size = new System.Drawing.Size(0, 23);
@@ -205,7 +205,7 @@
             // label_testConnectF
             // 
             this.label_testConnectF.AutoSize = true;
-            this.label_testConnectF.BackColor = System.Drawing.SystemColors.Control;
+            this.label_testConnectF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.label_testConnectF.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_testConnectF.ForeColor = System.Drawing.Color.Red;
             this.label_testConnectF.Location = new System.Drawing.Point(291, 362);
