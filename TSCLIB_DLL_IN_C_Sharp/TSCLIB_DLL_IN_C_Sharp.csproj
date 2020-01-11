@@ -149,6 +149,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BacrcodeAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacrcodeAll.Designer.cs">
+      <DependentUpon>BacrcodeAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangeTextColor.cs" />
     <Compile Include="ConnectDB.cs" />
     <Compile Include="EAN13Class.cs" />
@@ -190,6 +196,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ZTest.cs" />
+    <EmbeddedResource Include="BacrcodeAll.resx">
+      <DependentUpon>BacrcodeAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BarcodeTSC.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BarcodeTSC.cs</DependentUpon>
@@ -288,6 +297,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\9104.png_300.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

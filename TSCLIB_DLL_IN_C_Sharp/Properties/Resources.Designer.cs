@@ -59,5 +59,15 @@ namespace TSCLIB_DLL_IN_C_Sharp.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9104_png_300 {
+            get {
+                object obj = ResourceManager.GetObject("9104.png_300", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

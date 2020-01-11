@@ -246,7 +246,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonConnect);
+            this.MaximizeBox = false;
             this.Name = "MainFrom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connect";
             this.Load += new System.EventHandler(this.MainFrom_Load);
             this.ResumeLayout(false);

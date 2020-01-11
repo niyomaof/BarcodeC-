@@ -1,4 +1,5 @@
 ﻿using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,7 +8,7 @@ using ZXing;
 
 namespace TSCLIB_DLL_IN_C_Sharp
 {
-    public partial class BarcodeTSC : MaterialSkin.Controls.MaterialForm
+    public partial class BarcodeTSC : MaterialForm
     {
         private static BarcodeTSC _instance;
         public static BarcodeTSC Instance
@@ -23,10 +24,11 @@ namespace TSCLIB_DLL_IN_C_Sharp
         public BarcodeTSC()
         {
             InitializeComponent();
-            var skinManager = MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            MaterialSkin.MaterialSkinManager material = MaterialSkinManager.Instance;
+            //var skinManager = MaterialSkinManager.Instance;
+            material.AddFormToManage(this);
+            material.Theme = MaterialSkinManager.Themes.DARK;
+            material.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -38,10 +40,10 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
                 char[] s = { '\n' };
                 string[] xx = text.Split(s);
-                string ss = xx[0];
-                int sss = int.Parse(ss);
+                string index = xx[0];
+                int indexComboBox = int.Parse(index);
 
-                comboBoxS.SelectedIndex = sss;
+                comboBoxS.SelectedIndex = indexComboBox;
                 txtX.Text = xx[1];
                 txtY.Text = xx[2];
                 txtS.Text = xx[3];
@@ -234,57 +236,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXcloseport();
                                 break;
                         }
-                        /*
-                        TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
-                        TSCLIB_DLL.ActiveXsendcommand("SIZE 104 mm, 27.6 mm");
-                        TSCLIB_DLL.ActiveXsendcommand("GAP 0 mm, 0 mm");
-                        TSCLIB_DLL.ActiveXsendcommand("SPEED 4");
-                        TSCLIB_DLL.ActiveXsendcommand("DIRECTION 1");
-                        TSCLIB_DLL.ActiveXsendcommand("DENSITY 12");
-                        TSCLIB_DLL.ActiveXsendcommand("SET TEAR ON");
-                        TSCLIB_DLL.ActiveXclearbuffer();
-                         */
-
-                        /*
-                        //|| ใบที่ 1
-                        TSCLIB_DLL.ActiveXwindowsfont(80, 30, 35, 0, 0, 0, "AngsanaUPC", product);
-                        TSCLIB_DLL.ActiveXbarcode("80", "60", "128", "80", "1", "0", "1", "5", barcode);
-                        TSCLIB_DLL.ActiveXwindowsfont(45, 150, 35, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
-                        TSCLIB_DLL.ActiveXwindowsfont(80, 170, 35, 0, 0, 0, "AngsanaUPC", price);
-                        TSCLIB_DLL.ActiveXwindowsfont(130, 150, 35, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
-                        TSCLIB_DLL.ActiveXwindowsfont(170, 170, 35, 0, 0, 0, "AngsanaUPC", qty);
-                        TSCLIB_DLL.ActiveXwindowsfont(70, 190, 40, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
-                        TSCLIB_DLL.ActiveXwindowsfont(160, 185, 50, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
-                        //||  ใบที่ 1
-
-
-                        //|| ใบที่ 2
-                        ////TSCLIB_DLL.ActiveXwindowsfont(แนวนอน, แนวตั้ง , ขนานตัวอักษร, 0, 0, 0, "AngsanaUPC", product);////
-                        ///TSCLIB_DLL.ActiveXbarcode(""+(20+325), "55", "EAN13", "80", "1", "0", "ยาว", "กว้าง", barcode);
-                        TSCLIB_DLL.ActiveXwindowsfont(90 + 250, 30, 35, 0, 0, 0, "AngsanaUPC", product);
-                        TSCLIB_DLL.ActiveXbarcode("" + (20 + 325), "60", "128", "80", "1", "0", "1", "4", barcode);
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 45, 150, 35, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 75, 170, 35, 0, 0, 0, "AngsanaUPC", price);
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 140, 150, 35, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 180, 170, 35, 0, 0, 0, "AngsanaUPC", qty);
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 70, 190, 40, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 160, 185, 50, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
-                        //|| ใบที่ 2
-
-                        //|| ใบที่ 3    
-                        TSCLIB_DLL.ActiveXwindowsfont(90 + 270 + 260, 30, 35, 0, 0, 0, "AngsanaUPC", product);
-                        TSCLIB_DLL.ActiveXbarcode("" + (20 + 325 + 280), "60", "128", "80", "1", "0", "1", "4", barcode);
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 50, 150, 35, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 80, 170, 35, 0, 0, 0, "AngsanaUPC", price);
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 230 + 185, 150, 35, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 180, 170, 35, 0, 0, 0, "AngsanaUPC", qty);
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 70, 190, 40, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
-                        TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 160, 185, 50, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
-                        //|| ใบที่ 3
-
-                    TSCLIB_DLL.ActiveXprintlabel(set, "1");
-                    TSCLIB_DLL.ActiveXcloseport();
-                        */
                     }
                     else if (comboBoxS.Text == "ฉลากกลางแบบฉีก 2 ดวง")
                     {
@@ -354,47 +305,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXcloseport();
                                 break;
                         }
-
                     }
-                    //TSCLIB_DLL.ActiveXabout();
-
-                    /*
-                    ////////สองดวงใหญ่//////////
-                    TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
-                    TSCLIB_DLL.ActiveXsendcommand("SIZE 104 mm, 31.6 mm");
-                    TSCLIB_DLL.ActiveXsendcommand("GAP 0 mm, 0 mm");
-                    TSCLIB_DLL.ActiveXsendcommand("SPEED 4");
-                    TSCLIB_DLL.ActiveXsendcommand("DIRECTION 1");
-                    TSCLIB_DLL.ActiveXsendcommand("DENSITY 12");
-                    TSCLIB_DLL.ActiveXsendcommand("SET TEAR ON");
-                    TSCLIB_DLL.ActiveXclearbuffer();
-
-                    //|| ใบที่ 1
-                    TSCLIB_DLL.ActiveXwindowsfont(80, 20, 45, 0, 0, 0, "AngsanaUPC", product);
-                    TSCLIB_DLL.ActiveXbarcode("80", "60", "128", "80", "1", "0", "2", "4", barcode);
-                    TSCLIB_DLL.ActiveXwindowsfont(65, 160, 45, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
-                    TSCLIB_DLL.ActiveXwindowsfont(95, 185, 45, 0, 0, 0, "AngsanaUPC", price);
-                    TSCLIB_DLL.ActiveXwindowsfont(180, 160, 45, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
-                    TSCLIB_DLL.ActiveXwindowsfont(240, 185, 45, 0, 0, 0, "AngsanaUPC", qty);
-                    TSCLIB_DLL.ActiveXwindowsfont(110, 205, 50, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
-                    TSCLIB_DLL.ActiveXwindowsfont(220, 200, 60, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
-                    //||  ใบที่ 1
-
-                    //|| ใบที่ 2
-                    ////TSCLIB_DLL.ActiveXwindowsfont(แนวนอน, แนวตั้ง , ขนานตัวอักษร, 0, 0, 0, "AngsanaUPC", product);////
-                    ///TSCLIB_DLL.ActiveXbarcode(""+(20+325), "55", "EAN13", "80", "1", "0", "ยาว", "กว้าง", barcode);
-                    TSCLIB_DLL.ActiveXwindowsfont(480, 20, 45, 0, 0, 0, "AngsanaUPC", product);
-                    TSCLIB_DLL.ActiveXbarcode("" + (485), "60", "128", "80", "1", "0", "2", "4", barcode);
-                    TSCLIB_DLL.ActiveXwindowsfont(475, 160, 45, 0, 0, 0, "AngsanaUPC", "ราคา/หน่วย");
-                    TSCLIB_DLL.ActiveXwindowsfont(505, 185, 45, 0, 0, 0, "AngsanaUPC", price);
-                    TSCLIB_DLL.ActiveXwindowsfont(590, 160, 45, 0, 0, 0, "AngsanaUPC", "ปริมาณสุทธิ (ก.ก.)");
-                    TSCLIB_DLL.ActiveXwindowsfont(650, 185, 45, 0, 0, 0, "AngsanaUPC", qty);
-                    TSCLIB_DLL.ActiveXwindowsfont(520, 205, 50, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
-                    TSCLIB_DLL.ActiveXwindowsfont(630, 200, 60, 0, 0, 0, "AngsanaUPC", total_price + " บ.");
-                    //|| ใบที่ 2
-                    TSCLIB_DLL.ActiveXprintlabel(set, "1");
-                    TSCLIB_DLL.ActiveXcloseport();
-                    */
                 }
             }
             catch (Exception ex)
@@ -661,6 +572,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
+            ////\\\\ ราคาสินค้า ที่ตัดจุด ไม่สามารถพิมตัวอักษรได้ \\\\////
             try
             {
                 string Barrcode, Check12Digits, Check12Digits2, Check12Digits3;
@@ -1241,7 +1153,49 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
         private void txtS_TextChanged(object sender, EventArgs e)
         {
+            if (comboBoxS.SelectedItem.ToString() == "ฉลากเล็กแบบฉีก 3 ดวง")
+            {
+                string bin_strng = txtS.Text;
+                int str_length = bin_strng.Length;
+                if (str_length > 0)
+                {
+                    if (bin_strng.Substring(str_length - 1).Equals("1") || bin_strng.Substring(str_length - 1).Equals("2") || bin_strng.Substring(str_length - 1).Equals("3"))
+                    {
+                        Console.WriteLine(bin_strng);
+                        txtS.Text = bin_strng;
 
+                    }
+                    else
+                    {
+                        Console.WriteLine(bin_strng);
+                        txtS.Text = bin_strng.Substring(0, str_length - 1);
+                        txtS.SelectionStart = txtS.Text.Length;
+                        txtS.SelectionLength = 0;
+                    }
+                }
+            }
+            else if (comboBoxS.SelectedItem.ToString() == "ฉลากกลางแบบฉีก 2 ดวง")
+            {
+                string bin_strng = txtS.Text;
+                int str_length = bin_strng.Length;
+                if (str_length > 0)
+                {
+                    if (bin_strng.Substring(str_length - 1).Equals("1") || bin_strng.Substring(str_length - 1).Equals("2"))
+                    {
+                        Console.WriteLine(bin_strng);
+                        txtS.Text = bin_strng;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(bin_strng);
+                        txtS.Text = bin_strng.Substring(0, str_length - 1);
+                        txtS.SelectionStart = txtS.Text.Length;
+                        txtS.SelectionLength = 0;
+                    }
+                }
+            }
+            
         }
 
         private void txtX_KeyPress(object sender, KeyPressEventArgs e)
@@ -1277,6 +1231,18 @@ namespace TSCLIB_DLL_IN_C_Sharp
             {
                 e.Handled = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BarcodeAll objForm = new BarcodeAll();
+            
+            objForm.Show();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

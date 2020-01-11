@@ -33,7 +33,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.sKUMASTERTableAdapter = new TSCLIB_DLL_IN_C_Sharp.HYDataSetTableAdapters.SKUMASTERTableAdapter();
             this.tableAdapterManager = new TSCLIB_DLL_IN_C_Sharp.HYDataSetTableAdapters.TableAdapterManager();
-            this.sKUMASTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.ปริ้น = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
@@ -51,8 +50,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.laProduct = new System.Windows.Forms.Label();
-            this.pic = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSet = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.showBarcode = new System.Windows.Forms.Button();
@@ -62,6 +59,11 @@
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.ตั้งค่าหน้ากระดาษ = new System.Windows.Forms.TabPage();
+            this.materialDivider13 = new MaterialSkin.Controls.MaterialDivider();
+            this.label21 = new System.Windows.Forms.Label();
+            this.materialDivider10 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider11 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider12 = new MaterialSkin.Controls.MaterialDivider();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.materialDivider8 = new MaterialSkin.Controls.MaterialDivider();
@@ -85,21 +87,17 @@
             this.txtY = new System.Windows.Forms.TextBox();
             this.txtX = new System.Windows.Forms.TextBox();
             this.save = new System.Windows.Forms.Button();
-            this.ปรับแต่งบาร์โค้ด = new System.Windows.Forms.TabPage();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.label21 = new System.Windows.Forms.Label();
-            this.materialDivider10 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialDivider11 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialDivider12 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialDivider13 = new MaterialSkin.Controls.MaterialDivider();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pic = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             this.ปริ้น.SuspendLayout();
+            this.ตั้งค่าหน้ากระดาษ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.ตั้งค่าหน้ากระดาษ.SuspendLayout();
             this.SuspendLayout();
             // 
             // hYDataSet
@@ -122,15 +120,10 @@
             this.tableAdapterManager.SKUMASTERTableAdapter = this.sKUMASTERTableAdapter;
             this.tableAdapterManager.UpdateOrder = TSCLIB_DLL_IN_C_Sharp.HYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // sKUMASTERBindingSource
-            // 
-            this.sKUMASTERBindingSource.DataMember = "SKUMASTER";
-            // 
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.ปริ้น);
             this.materialTabControl1.Controls.Add(this.ตั้งค่าหน้ากระดาษ);
-            this.materialTabControl1.Controls.Add(this.ปรับแต่งบาร์โค้ด);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Location = new System.Drawing.Point(2, 93);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -179,66 +172,66 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.Control;
             this.label15.Location = new System.Drawing.Point(319, 247);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 23);
+            this.label15.Size = new System.Drawing.Size(99, 26);
             this.label15.TabIndex = 65;
             this.label15.Text = "จำนวนสำเนา/ชุด";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
             this.label14.Location = new System.Drawing.Point(55, 169);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 23);
+            this.label14.Size = new System.Drawing.Size(68, 26);
             this.label14.TabIndex = 64;
             this.label14.Text = "รหัสสินค้า";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Control;
             this.label13.Location = new System.Drawing.Point(205, 102);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 23);
+            this.label13.Size = new System.Drawing.Size(72, 26);
             this.label13.TabIndex = 63;
             this.label13.Text = "ราคา/หน่วย";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
             this.label12.Location = new System.Drawing.Point(51, 102);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 23);
+            this.label12.Size = new System.Drawing.Size(106, 26);
             this.label12.TabIndex = 62;
             this.label12.Text = "ปริมาณสุทธิ (ก.ก.)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(301, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 23);
+            this.label2.Size = new System.Drawing.Size(95, 26);
             this.label2.TabIndex = 61;
             this.label2.Text = "บาร์โค้ด 18 หลัก";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
             this.label11.Location = new System.Drawing.Point(55, 33);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 23);
+            this.label11.Size = new System.Drawing.Size(59, 26);
             this.label11.TabIndex = 60;
             this.label11.Text = "ชื่อสินค้า";
             // 
@@ -345,24 +338,6 @@
             this.laProduct.TabIndex = 51;
             this.laProduct.Text = "ชื่อสินค้า";
             // 
-            // pic
-            // 
-            this.pic.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pic.Location = new System.Drawing.Point(167, 380);
-            this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(148, 117);
-            this.pic.TabIndex = 50;
-            this.pic.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(91, 325);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 275);
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtSet
             // 
             this.txtSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -387,6 +362,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(243, 34);
             this.richTextBox1.TabIndex = 47;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // showBarcode
             // 
@@ -504,14 +480,70 @@
             this.ตั้งค่าหน้ากระดาษ.UseVisualStyleBackColor = true;
             this.ตั้งค่าหน้ากระดาษ.Click += new System.EventHandler(this.ตั้งค่าหน้ากระดาษ_Click);
             // 
+            // materialDivider13
+            // 
+            this.materialDivider13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider13.Depth = 0;
+            this.materialDivider13.Location = new System.Drawing.Point(107, 178);
+            this.materialDivider13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider13.Name = "materialDivider13";
+            this.materialDivider13.Size = new System.Drawing.Size(320, 2);
+            this.materialDivider13.TabIndex = 76;
+            this.materialDivider13.Text = "materialDivider13";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Angsana New", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.Control;
+            this.label21.Location = new System.Drawing.Point(119, 79);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(90, 23);
+            this.label21.TabIndex = 75;
+            this.label21.Text = "เลือกขนานฉลาก";
+            // 
+            // materialDivider10
+            // 
+            this.materialDivider10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider10.Depth = 0;
+            this.materialDivider10.Location = new System.Drawing.Point(107, 92);
+            this.materialDivider10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider10.Name = "materialDivider10";
+            this.materialDivider10.Size = new System.Drawing.Size(2, 88);
+            this.materialDivider10.TabIndex = 74;
+            this.materialDivider10.Text = "materialDivider10";
+            // 
+            // materialDivider11
+            // 
+            this.materialDivider11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider11.Depth = 0;
+            this.materialDivider11.Location = new System.Drawing.Point(426, 92);
+            this.materialDivider11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider11.Name = "materialDivider11";
+            this.materialDivider11.Size = new System.Drawing.Size(2, 88);
+            this.materialDivider11.TabIndex = 73;
+            this.materialDivider11.Text = "materialDivider11";
+            // 
+            // materialDivider12
+            // 
+            this.materialDivider12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider12.Depth = 0;
+            this.materialDivider12.Location = new System.Drawing.Point(107, 92);
+            this.materialDivider12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider12.Name = "materialDivider12";
+            this.materialDivider12.Size = new System.Drawing.Size(320, 2);
+            this.materialDivider12.TabIndex = 72;
+            this.materialDivider12.Text = "materialDivider12";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.Control;
             this.label20.Location = new System.Drawing.Point(311, 366);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(28, 19);
+            this.label20.Size = new System.Drawing.Size(28, 22);
             this.label20.TabIndex = 71;
             this.label20.Text = "ดวง";
             // 
@@ -519,11 +551,11 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Angsana New", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.Control;
             this.label19.Location = new System.Drawing.Point(119, 317);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(42, 21);
+            this.label19.Size = new System.Drawing.Size(37, 23);
             this.label19.TabIndex = 70;
             this.label19.Text = "ฉลาก";
             // 
@@ -575,11 +607,11 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Angsana New", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.Control;
             this.label18.Location = new System.Drawing.Point(119, 197);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(76, 21);
+            this.label18.Size = new System.Drawing.Size(65, 23);
             this.label18.TabIndex = 64;
             this.label18.Text = "ขนานฉลาก";
             this.label18.Click += new System.EventHandler(this.label18_Click);
@@ -587,22 +619,22 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Control;
             this.label17.Location = new System.Drawing.Point(393, 248);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 19);
+            this.label17.Size = new System.Drawing.Size(27, 22);
             this.label17.TabIndex = 63;
             this.label17.Text = "มม.";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.Control;
             this.label16.Location = new System.Drawing.Point(237, 248);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 19);
+            this.label16.Size = new System.Drawing.Size(27, 22);
             this.label16.TabIndex = 62;
             this.label16.Text = "มม.";
             // 
@@ -656,23 +688,24 @@
             // 
             // comboBoxS
             // 
+            this.comboBoxS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxS.Items.AddRange(new object[] {
             "ฉลากเล็กแบบฉีก 3 ดวง",
             "ฉลากกลางแบบฉีก 2 ดวง"});
-            this.comboBoxS.Location = new System.Drawing.Point(204, 116);
+            this.comboBoxS.Location = new System.Drawing.Point(179, 119);
             this.comboBoxS.Name = "comboBoxS";
-            this.comboBoxS.Size = new System.Drawing.Size(156, 34);
+            this.comboBoxS.Size = new System.Drawing.Size(160, 34);
             this.comboBoxS.TabIndex = 58;
             this.comboBoxS.SelectedIndexChanged += new System.EventHandler(this.comboBoxS_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(138, 366);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 19);
+            this.label6.Size = new System.Drawing.Size(72, 22);
             this.label6.TabIndex = 57;
             this.label6.Text = "จำนวนฉลาก :";
             // 
@@ -682,6 +715,7 @@
             this.txtS.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtS.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtS.Location = new System.Drawing.Point(216, 359);
+            this.txtS.MaxLength = 1;
             this.txtS.Name = "txtS";
             this.txtS.Size = new System.Drawing.Size(95, 34);
             this.txtS.TabIndex = 56;
@@ -711,22 +745,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(283, 248);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 19);
+            this.label4.Size = new System.Drawing.Size(49, 22);
             this.label4.TabIndex = 53;
             this.label4.Text = "ความสูง:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(115, 248);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.Size = new System.Drawing.Size(60, 22);
             this.label5.TabIndex = 52;
             this.label5.Text = "ความกว้าง:";
             // 
@@ -769,16 +803,6 @@
             this.save.UseVisualStyleBackColor = false;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
-            // ปรับแต่งบาร์โค้ด
-            // 
-            this.ปรับแต่งบาร์โค้ด.Location = new System.Drawing.Point(4, 22);
-            this.ปรับแต่งบาร์โค้ด.Name = "ปรับแต่งบาร์โค้ด";
-            this.ปรับแต่งบาร์โค้ด.Padding = new System.Windows.Forms.Padding(3);
-            this.ปรับแต่งบาร์โค้ด.Size = new System.Drawing.Size(540, 712);
-            this.ปรับแต่งบาร์โค้ด.TabIndex = 2;
-            this.ปรับแต่งบาร์โค้ด.Text = "ปรับแต่งบาร์โค้ด";
-            this.ปรับแต่งบาร์โค้ด.UseVisualStyleBackColor = true;
-            // 
             // materialDivider1
             // 
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -803,61 +827,38 @@
             this.materialTabSelector1.Text = "TabSelector1";
             this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
             // 
-            // label21
+            // button2
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(119, 79);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(104, 21);
-            this.label21.TabIndex = 75;
-            this.label21.Text = "เลือกขนานฉลาก";
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(71)))), ((int)(((byte)(80)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(475, 64);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 32);
+            this.button2.TabIndex = 66;
+            this.button2.Text = "ปริ้นรวม";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // materialDivider10
+            // pic
             // 
-            this.materialDivider10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider10.Depth = 0;
-            this.materialDivider10.Location = new System.Drawing.Point(107, 92);
-            this.materialDivider10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider10.Name = "materialDivider10";
-            this.materialDivider10.Size = new System.Drawing.Size(2, 88);
-            this.materialDivider10.TabIndex = 74;
-            this.materialDivider10.Text = "materialDivider10";
+            this.pic.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pic.Location = new System.Drawing.Point(167, 380);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(148, 117);
+            this.pic.TabIndex = 50;
+            this.pic.TabStop = false;
             // 
-            // materialDivider11
+            // pictureBox1
             // 
-            this.materialDivider11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider11.Depth = 0;
-            this.materialDivider11.Location = new System.Drawing.Point(426, 92);
-            this.materialDivider11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider11.Name = "materialDivider11";
-            this.materialDivider11.Size = new System.Drawing.Size(2, 88);
-            this.materialDivider11.TabIndex = 73;
-            this.materialDivider11.Text = "materialDivider11";
-            // 
-            // materialDivider12
-            // 
-            this.materialDivider12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider12.Depth = 0;
-            this.materialDivider12.Location = new System.Drawing.Point(107, 92);
-            this.materialDivider12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider12.Name = "materialDivider12";
-            this.materialDivider12.Size = new System.Drawing.Size(320, 2);
-            this.materialDivider12.TabIndex = 72;
-            this.materialDivider12.Text = "materialDivider12";
-            // 
-            // materialDivider13
-            // 
-            this.materialDivider13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider13.Depth = 0;
-            this.materialDivider13.Location = new System.Drawing.Point(107, 178);
-            this.materialDivider13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider13.Name = "materialDivider13";
-            this.materialDivider13.Size = new System.Drawing.Size(320, 2);
-            this.materialDivider13.TabIndex = 76;
-            this.materialDivider13.Text = "materialDivider13";
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.Location = new System.Drawing.Point(91, 325);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(313, 275);
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
             // 
             // BarcodeTSC
             // 
@@ -865,22 +866,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(550, 829);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
+            this.MaximizeBox = false;
             this.Name = "BarcodeTSC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barcode TSC Printer";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sKUMASTERBindingSource)).EndInit();
             this.materialTabControl1.ResumeLayout(false);
             this.ปริ้น.ResumeLayout(false);
             this.ปริ้น.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ตั้งค่าหน้ากระดาษ.ResumeLayout(false);
             this.ตั้งค่าหน้ากระดาษ.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -929,7 +931,6 @@
         private System.Windows.Forms.TextBox txtY;
         private System.Windows.Forms.TextBox txtX;
         private System.Windows.Forms.Button save;
-        private System.Windows.Forms.TabPage ปรับแต่งบาร์โค้ด;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private MaterialSkin.Controls.MaterialDivider materialDivider5;
         private MaterialSkin.Controls.MaterialDivider materialDivider4;
@@ -950,6 +951,7 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider10;
         private MaterialSkin.Controls.MaterialDivider materialDivider11;
         private MaterialSkin.Controls.MaterialDivider materialDivider12;
+        private System.Windows.Forms.Button button2;
     }
 }
 
