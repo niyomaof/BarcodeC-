@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.laProduct = new System.Windows.Forms.Label();
+            this.pic = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSet = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.showBarcode = new System.Windows.Forms.Button();
@@ -90,14 +92,12 @@
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.button2 = new System.Windows.Forms.Button();
-            this.pic = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             this.ปริ้น.SuspendLayout();
-            this.ตั้งค่าหน้ากระดาษ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ตั้งค่าหน้ากระดาษ.SuspendLayout();
             this.SuspendLayout();
             // 
             // hYDataSet
@@ -125,11 +125,11 @@
             this.materialTabControl1.Controls.Add(this.ปริ้น);
             this.materialTabControl1.Controls.Add(this.ตั้งค่าหน้ากระดาษ);
             this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(2, 93);
+            this.materialTabControl1.Location = new System.Drawing.Point(-7, 93);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(548, 738);
+            this.materialTabControl1.Size = new System.Drawing.Size(557, 738);
             this.materialTabControl1.TabIndex = 42;
             // 
             // ปริ้น
@@ -163,7 +163,7 @@
             this.ปริ้น.Location = new System.Drawing.Point(4, 22);
             this.ปริ้น.Name = "ปริ้น";
             this.ปริ้น.Padding = new System.Windows.Forms.Padding(3);
-            this.ปริ้น.Size = new System.Drawing.Size(540, 712);
+            this.ปริ้น.Size = new System.Drawing.Size(549, 712);
             this.ปริ้น.TabIndex = 0;
             this.ปริ้น.Text = "ปริ้น";
             this.ปริ้น.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(301, 169);
+            this.label2.Location = new System.Drawing.Point(287, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 26);
             this.label2.TabIndex = 61;
@@ -338,6 +338,24 @@
             this.laProduct.TabIndex = 51;
             this.laProduct.Text = "ชื่อสินค้า";
             // 
+            // pic
+            // 
+            this.pic.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pic.Location = new System.Drawing.Point(167, 380);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(148, 117);
+            this.pic.TabIndex = 50;
+            this.pic.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.Location = new System.Drawing.Point(91, 325);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(313, 275);
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
             // txtSet
             // 
             this.txtSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -354,7 +372,7 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(231, 195);
+            this.richTextBox1.Location = new System.Drawing.Point(210, 197);
             this.richTextBox1.MaxLength = 18;
             this.richTextBox1.Multiline = false;
             this.richTextBox1.Name = "richTextBox1";
@@ -371,7 +389,7 @@
             this.showBarcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showBarcode.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showBarcode.ForeColor = System.Drawing.SystemColors.Control;
-            this.showBarcode.Location = new System.Drawing.Point(77, 276);
+            this.showBarcode.Location = new System.Drawing.Point(91, 276);
             this.showBarcode.Name = "showBarcode";
             this.showBarcode.Size = new System.Drawing.Size(131, 43);
             this.showBarcode.TabIndex = 46;
@@ -409,7 +427,7 @@
             this.txtProduct.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtProduct.Location = new System.Drawing.Point(55, 59);
             this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(295, 34);
+            this.txtProduct.Size = new System.Drawing.Size(254, 34);
             this.txtProduct.TabIndex = 43;
             this.txtProduct.TextChanged += new System.EventHandler(this.txtProduct_TextChanged_1);
             // 
@@ -420,7 +438,7 @@
             this.txtBarcode.Location = new System.Drawing.Point(55, 195);
             this.txtBarcode.MaxLength = 6;
             this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(170, 34);
+            this.txtBarcode.Size = new System.Drawing.Size(102, 34);
             this.txtBarcode.TabIndex = 42;
             this.txtBarcode.TextChanged += new System.EventHandler(this.txtBarcode_TextChanged_1);
             this.txtBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarcode_KeyPress_1);
@@ -832,7 +850,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(71)))), ((int)(((byte)(80)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("AngsanaUPC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Location = new System.Drawing.Point(475, 64);
             this.button2.Name = "button2";
@@ -841,24 +859,6 @@
             this.button2.Text = "ปริ้นรวม";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pic
-            // 
-            this.pic.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pic.Location = new System.Drawing.Point(167, 380);
-            this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(148, 117);
-            this.pic.TabIndex = 50;
-            this.pic.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(91, 325);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 275);
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
             // 
             // BarcodeTSC
             // 
@@ -879,10 +879,10 @@
             this.materialTabControl1.ResumeLayout(false);
             this.ปริ้น.ResumeLayout(false);
             this.ปริ้น.PerformLayout();
-            this.ตั้งค่าหน้ากระดาษ.ResumeLayout(false);
-            this.ตั้งค่าหน้ากระดาษ.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ตั้งค่าหน้ากระดาษ.ResumeLayout(false);
+            this.ตั้งค่าหน้ากระดาษ.PerformLayout();
             this.ResumeLayout(false);
 
         }

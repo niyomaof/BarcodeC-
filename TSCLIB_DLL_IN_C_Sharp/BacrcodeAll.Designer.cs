@@ -32,6 +32,8 @@
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.buttonExit2 = new System.Windows.Forms.Button();
             this.buttonPrintBarcode2 = new System.Windows.Forms.Button();
             this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
@@ -63,6 +65,9 @@
             this.txtProduct2_1 = new System.Windows.Forms.TextBox();
             this.txtBarcode2_1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.materialDivider18 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider19 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider20 = new MaterialSkin.Controls.MaterialDivider();
@@ -72,13 +77,13 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.richTextBox3_3 = new System.Windows.Forms.RichTextBox();
+            this.txtPrice3_3 = new System.Windows.Forms.TextBox();
+            this.txtQty3_3 = new System.Windows.Forms.TextBox();
+            this.txtProduct3_3 = new System.Windows.Forms.TextBox();
+            this.txtBarcode3_3 = new System.Windows.Forms.TextBox();
             this.buttonExit3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonPrintBarcode3 = new System.Windows.Forms.Button();
             this.materialDivider14 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider15 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider16 = new MaterialSkin.Controls.MaterialDivider();
@@ -88,11 +93,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.richTextBox3_2 = new System.Windows.Forms.RichTextBox();
+            this.txtPrice3_2 = new System.Windows.Forms.TextBox();
+            this.txtQty3_2 = new System.Windows.Forms.TextBox();
+            this.txtProduct3_2 = new System.Windows.Forms.TextBox();
+            this.txtBarcode3_2 = new System.Windows.Forms.TextBox();
             this.materialDivider10 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider11 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider12 = new MaterialSkin.Controls.MaterialDivider();
@@ -102,11 +107,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.richTextBox3_1 = new System.Windows.Forms.RichTextBox();
+            this.txtPrice3_1 = new System.Windows.Forms.TextBox();
+            this.txtQty3_1 = new System.Windows.Forms.TextBox();
+            this.txtProduct3_1 = new System.Windows.Forms.TextBox();
+            this.txtBarcode3_1 = new System.Windows.Forms.TextBox();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -141,15 +146,17 @@
             this.materialTabControl1.Controls.Add(this.tabPage1);
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(4, 97);
+            this.materialTabControl1.Location = new System.Drawing.Point(-7, 97);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1147, 515);
+            this.materialTabControl1.Size = new System.Drawing.Size(1168, 515);
             this.materialTabControl1.TabIndex = 47;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label30);
+            this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.buttonExit2);
             this.tabPage1.Controls.Add(this.buttonPrintBarcode2);
             this.tabPage1.Controls.Add(this.materialDivider6);
@@ -183,10 +190,32 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1139, 489);
+            this.tabPage1.Size = new System.Drawing.Size(1160, 489);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ฉลาก 2 ดวง";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.SystemColors.Control;
+            this.label30.Location = new System.Drawing.Point(708, 3);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(69, 26);
+            this.label30.TabIndex = 138;
+            this.label30.Text = "Barcode_2";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.SystemColors.Control;
+            this.label29.Location = new System.Drawing.Point(334, 3);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(69, 26);
+            this.label29.TabIndex = 137;
+            this.label29.Text = "Barcode_1";
             // 
             // buttonExit2
             // 
@@ -536,6 +565,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label28);
+            this.tabPage2.Controls.Add(this.label27);
+            this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.materialDivider18);
             this.tabPage2.Controls.Add(this.materialDivider19);
             this.tabPage2.Controls.Add(this.materialDivider20);
@@ -545,13 +577,13 @@
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.richTextBox5);
-            this.tabPage2.Controls.Add(this.textBox13);
-            this.tabPage2.Controls.Add(this.textBox14);
-            this.tabPage2.Controls.Add(this.textBox15);
-            this.tabPage2.Controls.Add(this.textBox16);
+            this.tabPage2.Controls.Add(this.richTextBox3_3);
+            this.tabPage2.Controls.Add(this.txtPrice3_3);
+            this.tabPage2.Controls.Add(this.txtQty3_3);
+            this.tabPage2.Controls.Add(this.txtProduct3_3);
+            this.tabPage2.Controls.Add(this.txtBarcode3_3);
             this.tabPage2.Controls.Add(this.buttonExit3);
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.buttonPrintBarcode3);
             this.tabPage2.Controls.Add(this.materialDivider14);
             this.tabPage2.Controls.Add(this.materialDivider15);
             this.tabPage2.Controls.Add(this.materialDivider16);
@@ -561,11 +593,11 @@
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.richTextBox4);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox11);
-            this.tabPage2.Controls.Add(this.textBox12);
+            this.tabPage2.Controls.Add(this.richTextBox3_2);
+            this.tabPage2.Controls.Add(this.txtPrice3_2);
+            this.tabPage2.Controls.Add(this.txtQty3_2);
+            this.tabPage2.Controls.Add(this.txtProduct3_2);
+            this.tabPage2.Controls.Add(this.txtBarcode3_2);
             this.tabPage2.Controls.Add(this.materialDivider10);
             this.tabPage2.Controls.Add(this.materialDivider11);
             this.tabPage2.Controls.Add(this.materialDivider12);
@@ -575,24 +607,57 @@
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.richTextBox3);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.textBox7);
-            this.tabPage2.Controls.Add(this.textBox8);
+            this.tabPage2.Controls.Add(this.richTextBox3_1);
+            this.tabPage2.Controls.Add(this.txtPrice3_1);
+            this.tabPage2.Controls.Add(this.txtQty3_1);
+            this.tabPage2.Controls.Add(this.txtProduct3_1);
+            this.tabPage2.Controls.Add(this.txtBarcode3_1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1139, 489);
+            this.tabPage2.Size = new System.Drawing.Size(1160, 489);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ฉลาก 3 ดวง";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.SystemColors.Control;
+            this.label28.Location = new System.Drawing.Point(913, 4);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(69, 26);
+            this.label28.TabIndex = 138;
+            this.label28.Text = "Barcode_3";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.Control;
+            this.label27.Location = new System.Drawing.Point(538, 4);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 26);
+            this.label27.TabIndex = 137;
+            this.label27.Text = "Barcode_2";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.SystemColors.Control;
+            this.label26.Location = new System.Drawing.Point(164, 4);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(69, 26);
+            this.label26.TabIndex = 136;
+            this.label26.Text = "Barcode_1";
             // 
             // materialDivider18
             // 
             this.materialDivider18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider18.Depth = 0;
-            this.materialDivider18.Location = new System.Drawing.Point(759, 13);
+            this.materialDivider18.Location = new System.Drawing.Point(769, 14);
             this.materialDivider18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider18.Name = "materialDivider18";
             this.materialDivider18.Size = new System.Drawing.Size(3, 230);
@@ -603,7 +668,7 @@
             // 
             this.materialDivider19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider19.Depth = 0;
-            this.materialDivider19.Location = new System.Drawing.Point(1126, 13);
+            this.materialDivider19.Location = new System.Drawing.Point(1136, 14);
             this.materialDivider19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider19.Name = "materialDivider19";
             this.materialDivider19.Size = new System.Drawing.Size(3, 230);
@@ -614,7 +679,7 @@
             // 
             this.materialDivider20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider20.Depth = 0;
-            this.materialDivider20.Location = new System.Drawing.Point(759, 240);
+            this.materialDivider20.Location = new System.Drawing.Point(769, 241);
             this.materialDivider20.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider20.Name = "materialDivider20";
             this.materialDivider20.Size = new System.Drawing.Size(370, 3);
@@ -625,7 +690,7 @@
             // 
             this.materialDivider21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider21.Depth = 0;
-            this.materialDivider21.Location = new System.Drawing.Point(759, 13);
+            this.materialDivider21.Location = new System.Drawing.Point(769, 14);
             this.materialDivider21.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider21.Name = "materialDivider21";
             this.materialDivider21.Size = new System.Drawing.Size(370, 3);
@@ -637,7 +702,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(778, 155);
+            this.label21.Location = new System.Drawing.Point(788, 156);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(68, 26);
             this.label21.TabIndex = 132;
@@ -648,7 +713,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.Control;
-            this.label22.Location = new System.Drawing.Point(903, 88);
+            this.label22.Location = new System.Drawing.Point(913, 89);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(72, 26);
             this.label22.TabIndex = 131;
@@ -659,7 +724,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.Control;
-            this.label23.Location = new System.Drawing.Point(774, 88);
+            this.label23.Location = new System.Drawing.Point(784, 89);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(106, 26);
             this.label23.TabIndex = 130;
@@ -670,7 +735,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.Control;
-            this.label24.Location = new System.Drawing.Point(978, 155);
+            this.label24.Location = new System.Drawing.Point(988, 156);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(95, 26);
             this.label24.TabIndex = 129;
@@ -681,64 +746,70 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.Control;
-            this.label25.Location = new System.Drawing.Point(778, 19);
+            this.label25.Location = new System.Drawing.Point(788, 20);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(59, 26);
             this.label25.TabIndex = 128;
             this.label25.Text = "ชื่อสินค้า";
             // 
-            // richTextBox5
+            // richTextBox3_3
             // 
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox5.Enabled = false;
-            this.richTextBox5.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox5.Location = new System.Drawing.Point(908, 181);
-            this.richTextBox5.MaxLength = 18;
-            this.richTextBox5.Multiline = false;
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox5.Size = new System.Drawing.Size(194, 34);
-            this.richTextBox5.TabIndex = 127;
-            this.richTextBox5.Text = "";
+            this.richTextBox3_3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3_3.Enabled = false;
+            this.richTextBox3_3.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3_3.Location = new System.Drawing.Point(918, 182);
+            this.richTextBox3_3.MaxLength = 18;
+            this.richTextBox3_3.Multiline = false;
+            this.richTextBox3_3.Name = "richTextBox3_3";
+            this.richTextBox3_3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox3_3.Size = new System.Drawing.Size(212, 34);
+            this.richTextBox3_3.TabIndex = 127;
+            this.richTextBox3_3.Text = "";
             // 
-            // textBox13
+            // txtPrice3_3
             // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(907, 114);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 34);
-            this.textBox13.TabIndex = 126;
+            this.txtPrice3_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrice3_3.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice3_3.Location = new System.Drawing.Point(917, 115);
+            this.txtPrice3_3.Name = "txtPrice3_3";
+            this.txtPrice3_3.Size = new System.Drawing.Size(100, 34);
+            this.txtPrice3_3.TabIndex = 126;
+            this.txtPrice3_3.TextChanged += new System.EventHandler(this.txtPrice3_3_TextChanged);
+            this.txtPrice3_3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice3_3_KeyPress);
             // 
-            // textBox14
+            // txtQty3_3
             // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(778, 114);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 34);
-            this.textBox14.TabIndex = 125;
+            this.txtQty3_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQty3_3.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQty3_3.Location = new System.Drawing.Point(788, 115);
+            this.txtQty3_3.Name = "txtQty3_3";
+            this.txtQty3_3.Size = new System.Drawing.Size(100, 34);
+            this.txtQty3_3.TabIndex = 125;
+            this.txtQty3_3.TextChanged += new System.EventHandler(this.txtQty3_3_TextChanged);
+            this.txtQty3_3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty3_3_KeyPress);
             // 
-            // textBox15
+            // txtProduct3_3
             // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.Enabled = false;
-            this.textBox15.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox15.Location = new System.Drawing.Point(778, 45);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(102, 34);
-            this.textBox15.TabIndex = 124;
+            this.txtProduct3_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProduct3_3.Enabled = false;
+            this.txtProduct3_3.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduct3_3.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtProduct3_3.Location = new System.Drawing.Point(788, 46);
+            this.txtProduct3_3.Name = "txtProduct3_3";
+            this.txtProduct3_3.Size = new System.Drawing.Size(102, 34);
+            this.txtProduct3_3.TabIndex = 124;
             // 
-            // textBox16
+            // txtBarcode3_3
             // 
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(778, 181);
-            this.textBox16.MaxLength = 6;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 34);
-            this.textBox16.TabIndex = 123;
+            this.txtBarcode3_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBarcode3_3.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarcode3_3.Location = new System.Drawing.Point(788, 182);
+            this.txtBarcode3_3.MaxLength = 6;
+            this.txtBarcode3_3.Name = "txtBarcode3_3";
+            this.txtBarcode3_3.Size = new System.Drawing.Size(100, 34);
+            this.txtBarcode3_3.TabIndex = 123;
+            this.txtBarcode3_3.TextChanged += new System.EventHandler(this.txtBarcode3_3_TextChanged);
+            this.txtBarcode3_3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarcode3_3_KeyPress);
             // 
             // buttonExit3
             // 
@@ -747,7 +818,7 @@
             this.buttonExit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit3.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonExit3.Location = new System.Drawing.Point(551, 333);
+            this.buttonExit3.Location = new System.Drawing.Point(561, 334);
             this.buttonExit3.Name = "buttonExit3";
             this.buttonExit3.Size = new System.Drawing.Size(82, 43);
             this.buttonExit3.TabIndex = 121;
@@ -755,25 +826,26 @@
             this.buttonExit3.UseVisualStyleBackColor = false;
             this.buttonExit3.Click += new System.EventHandler(this.buttonExit3_Click);
             // 
-            // button2
+            // buttonPrintBarcode3
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(523, 258);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 43);
-            this.button2.TabIndex = 120;
-            this.button2.Text = "Print Barcode";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonPrintBarcode3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.buttonPrintBarcode3.FlatAppearance.BorderSize = 0;
+            this.buttonPrintBarcode3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrintBarcode3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrintBarcode3.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonPrintBarcode3.Location = new System.Drawing.Point(533, 259);
+            this.buttonPrintBarcode3.Name = "buttonPrintBarcode3";
+            this.buttonPrintBarcode3.Size = new System.Drawing.Size(131, 43);
+            this.buttonPrintBarcode3.TabIndex = 120;
+            this.buttonPrintBarcode3.Text = "Print Barcode";
+            this.buttonPrintBarcode3.UseVisualStyleBackColor = false;
+            this.buttonPrintBarcode3.Click += new System.EventHandler(this.buttonPrintBarcode3_Click);
             // 
             // materialDivider14
             // 
             this.materialDivider14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider14.Depth = 0;
-            this.materialDivider14.Location = new System.Drawing.Point(385, 13);
+            this.materialDivider14.Location = new System.Drawing.Point(395, 14);
             this.materialDivider14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider14.Name = "materialDivider14";
             this.materialDivider14.Size = new System.Drawing.Size(3, 230);
@@ -784,7 +856,7 @@
             // 
             this.materialDivider15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider15.Depth = 0;
-            this.materialDivider15.Location = new System.Drawing.Point(752, 13);
+            this.materialDivider15.Location = new System.Drawing.Point(762, 14);
             this.materialDivider15.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider15.Name = "materialDivider15";
             this.materialDivider15.Size = new System.Drawing.Size(3, 230);
@@ -795,7 +867,7 @@
             // 
             this.materialDivider16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider16.Depth = 0;
-            this.materialDivider16.Location = new System.Drawing.Point(385, 240);
+            this.materialDivider16.Location = new System.Drawing.Point(395, 241);
             this.materialDivider16.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider16.Name = "materialDivider16";
             this.materialDivider16.Size = new System.Drawing.Size(370, 3);
@@ -806,7 +878,7 @@
             // 
             this.materialDivider17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider17.Depth = 0;
-            this.materialDivider17.Location = new System.Drawing.Point(385, 13);
+            this.materialDivider17.Location = new System.Drawing.Point(395, 14);
             this.materialDivider17.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider17.Name = "materialDivider17";
             this.materialDivider17.Size = new System.Drawing.Size(370, 3);
@@ -818,7 +890,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(404, 155);
+            this.label16.Location = new System.Drawing.Point(414, 156);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(68, 26);
             this.label16.TabIndex = 102;
@@ -829,7 +901,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(529, 88);
+            this.label17.Location = new System.Drawing.Point(539, 89);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(72, 26);
             this.label17.TabIndex = 101;
@@ -840,7 +912,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.Control;
-            this.label18.Location = new System.Drawing.Point(400, 88);
+            this.label18.Location = new System.Drawing.Point(410, 89);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(106, 26);
             this.label18.TabIndex = 100;
@@ -851,7 +923,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.Control;
-            this.label19.Location = new System.Drawing.Point(604, 155);
+            this.label19.Location = new System.Drawing.Point(614, 156);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(95, 26);
             this.label19.TabIndex = 99;
@@ -862,70 +934,76 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.Control;
-            this.label20.Location = new System.Drawing.Point(404, 19);
+            this.label20.Location = new System.Drawing.Point(414, 20);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(59, 26);
             this.label20.TabIndex = 98;
             this.label20.Text = "ชื่อสินค้า";
             // 
-            // richTextBox4
+            // richTextBox3_2
             // 
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Enabled = false;
-            this.richTextBox4.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(534, 181);
-            this.richTextBox4.MaxLength = 18;
-            this.richTextBox4.Multiline = false;
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox4.Size = new System.Drawing.Size(194, 34);
-            this.richTextBox4.TabIndex = 97;
-            this.richTextBox4.Text = "";
+            this.richTextBox3_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3_2.Enabled = false;
+            this.richTextBox3_2.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3_2.Location = new System.Drawing.Point(544, 182);
+            this.richTextBox3_2.MaxLength = 18;
+            this.richTextBox3_2.Multiline = false;
+            this.richTextBox3_2.Name = "richTextBox3_2";
+            this.richTextBox3_2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox3_2.Size = new System.Drawing.Size(212, 34);
+            this.richTextBox3_2.TabIndex = 97;
+            this.richTextBox3_2.Text = "";
             // 
-            // textBox9
+            // txtPrice3_2
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(533, 114);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 34);
-            this.textBox9.TabIndex = 96;
+            this.txtPrice3_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrice3_2.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice3_2.Location = new System.Drawing.Point(543, 115);
+            this.txtPrice3_2.Name = "txtPrice3_2";
+            this.txtPrice3_2.Size = new System.Drawing.Size(100, 34);
+            this.txtPrice3_2.TabIndex = 96;
+            this.txtPrice3_2.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.txtPrice3_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice3_2_KeyPress);
             // 
-            // textBox10
+            // txtQty3_2
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(404, 114);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 34);
-            this.textBox10.TabIndex = 95;
+            this.txtQty3_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQty3_2.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQty3_2.Location = new System.Drawing.Point(414, 115);
+            this.txtQty3_2.Name = "txtQty3_2";
+            this.txtQty3_2.Size = new System.Drawing.Size(100, 34);
+            this.txtQty3_2.TabIndex = 95;
+            this.txtQty3_2.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.txtQty3_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty3_2_KeyPress);
             // 
-            // textBox11
+            // txtProduct3_2
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Enabled = false;
-            this.textBox11.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox11.Location = new System.Drawing.Point(404, 45);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(102, 34);
-            this.textBox11.TabIndex = 94;
+            this.txtProduct3_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProduct3_2.Enabled = false;
+            this.txtProduct3_2.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduct3_2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtProduct3_2.Location = new System.Drawing.Point(414, 46);
+            this.txtProduct3_2.Name = "txtProduct3_2";
+            this.txtProduct3_2.Size = new System.Drawing.Size(102, 34);
+            this.txtProduct3_2.TabIndex = 94;
             // 
-            // textBox12
+            // txtBarcode3_2
             // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(404, 181);
-            this.textBox12.MaxLength = 6;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 34);
-            this.textBox12.TabIndex = 93;
+            this.txtBarcode3_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBarcode3_2.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarcode3_2.Location = new System.Drawing.Point(414, 182);
+            this.txtBarcode3_2.MaxLength = 6;
+            this.txtBarcode3_2.Name = "txtBarcode3_2";
+            this.txtBarcode3_2.Size = new System.Drawing.Size(100, 34);
+            this.txtBarcode3_2.TabIndex = 93;
+            this.txtBarcode3_2.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            this.txtBarcode3_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarcode3_2_KeyPress);
             // 
             // materialDivider10
             // 
             this.materialDivider10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider10.Depth = 0;
-            this.materialDivider10.Location = new System.Drawing.Point(11, 13);
+            this.materialDivider10.Location = new System.Drawing.Point(21, 14);
             this.materialDivider10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider10.Name = "materialDivider10";
             this.materialDivider10.Size = new System.Drawing.Size(3, 230);
@@ -936,7 +1014,7 @@
             // 
             this.materialDivider11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider11.Depth = 0;
-            this.materialDivider11.Location = new System.Drawing.Point(378, 13);
+            this.materialDivider11.Location = new System.Drawing.Point(388, 14);
             this.materialDivider11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider11.Name = "materialDivider11";
             this.materialDivider11.Size = new System.Drawing.Size(3, 230);
@@ -947,7 +1025,7 @@
             // 
             this.materialDivider12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider12.Depth = 0;
-            this.materialDivider12.Location = new System.Drawing.Point(11, 240);
+            this.materialDivider12.Location = new System.Drawing.Point(21, 241);
             this.materialDivider12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider12.Name = "materialDivider12";
             this.materialDivider12.Size = new System.Drawing.Size(370, 3);
@@ -958,7 +1036,7 @@
             // 
             this.materialDivider13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider13.Depth = 0;
-            this.materialDivider13.Location = new System.Drawing.Point(11, 13);
+            this.materialDivider13.Location = new System.Drawing.Point(21, 14);
             this.materialDivider13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider13.Name = "materialDivider13";
             this.materialDivider13.Size = new System.Drawing.Size(370, 3);
@@ -970,7 +1048,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(30, 155);
+            this.label7.Location = new System.Drawing.Point(40, 156);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 26);
             this.label7.TabIndex = 88;
@@ -981,7 +1059,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(155, 88);
+            this.label8.Location = new System.Drawing.Point(165, 89);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 26);
             this.label8.TabIndex = 87;
@@ -992,7 +1070,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(26, 88);
+            this.label9.Location = new System.Drawing.Point(36, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 26);
             this.label9.TabIndex = 86;
@@ -1003,7 +1081,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(230, 155);
+            this.label10.Location = new System.Drawing.Point(240, 156);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 26);
             this.label10.TabIndex = 85;
@@ -1014,64 +1092,70 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.Control;
-            this.label15.Location = new System.Drawing.Point(30, 19);
+            this.label15.Location = new System.Drawing.Point(40, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 26);
             this.label15.TabIndex = 84;
             this.label15.Text = "ชื่อสินค้า";
             // 
-            // richTextBox3
+            // richTextBox3_1
             // 
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Enabled = false;
-            this.richTextBox3.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(160, 181);
-            this.richTextBox3.MaxLength = 18;
-            this.richTextBox3.Multiline = false;
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox3.Size = new System.Drawing.Size(194, 34);
-            this.richTextBox3.TabIndex = 83;
-            this.richTextBox3.Text = "";
+            this.richTextBox3_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3_1.Enabled = false;
+            this.richTextBox3_1.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3_1.Location = new System.Drawing.Point(170, 182);
+            this.richTextBox3_1.MaxLength = 18;
+            this.richTextBox3_1.Multiline = false;
+            this.richTextBox3_1.Name = "richTextBox3_1";
+            this.richTextBox3_1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox3_1.Size = new System.Drawing.Size(212, 34);
+            this.richTextBox3_1.TabIndex = 83;
+            this.richTextBox3_1.Text = "";
             // 
-            // textBox5
+            // txtPrice3_1
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(159, 114);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 34);
-            this.textBox5.TabIndex = 82;
+            this.txtPrice3_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrice3_1.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice3_1.Location = new System.Drawing.Point(169, 115);
+            this.txtPrice3_1.Name = "txtPrice3_1";
+            this.txtPrice3_1.Size = new System.Drawing.Size(100, 34);
+            this.txtPrice3_1.TabIndex = 82;
+            this.txtPrice3_1.TextChanged += new System.EventHandler(this.txtPrice3_1_TextChanged);
+            this.txtPrice3_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice3_1_KeyPress);
             // 
-            // textBox6
+            // txtQty3_1
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(30, 114);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 34);
-            this.textBox6.TabIndex = 81;
+            this.txtQty3_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQty3_1.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQty3_1.Location = new System.Drawing.Point(40, 115);
+            this.txtQty3_1.Name = "txtQty3_1";
+            this.txtQty3_1.Size = new System.Drawing.Size(100, 34);
+            this.txtQty3_1.TabIndex = 81;
+            this.txtQty3_1.TextChanged += new System.EventHandler(this.txtQty3_1_TextChanged);
+            this.txtQty3_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty3_1_KeyPress);
             // 
-            // textBox7
+            // txtProduct3_1
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox7.Location = new System.Drawing.Point(30, 45);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(102, 34);
-            this.textBox7.TabIndex = 80;
+            this.txtProduct3_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProduct3_1.Enabled = false;
+            this.txtProduct3_1.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduct3_1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtProduct3_1.Location = new System.Drawing.Point(40, 46);
+            this.txtProduct3_1.Name = "txtProduct3_1";
+            this.txtProduct3_1.Size = new System.Drawing.Size(102, 34);
+            this.txtProduct3_1.TabIndex = 80;
             // 
-            // textBox8
+            // txtBarcode3_1
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(30, 181);
-            this.textBox8.MaxLength = 6;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 34);
-            this.textBox8.TabIndex = 79;
+            this.txtBarcode3_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBarcode3_1.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarcode3_1.Location = new System.Drawing.Point(40, 182);
+            this.txtBarcode3_1.MaxLength = 6;
+            this.txtBarcode3_1.Name = "txtBarcode3_1";
+            this.txtBarcode3_1.Size = new System.Drawing.Size(100, 34);
+            this.txtBarcode3_1.TabIndex = 79;
+            this.txtBarcode3_1.TextChanged += new System.EventHandler(this.txtBarcode3_1_TextChanged);
+            this.txtBarcode3_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarcode3_1_KeyPress);
             // 
             // BarcodeAll
             // 
@@ -1140,11 +1224,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.RichTextBox richTextBox3_2;
+        private System.Windows.Forms.TextBox txtPrice3_2;
+        private System.Windows.Forms.TextBox txtQty3_2;
+        private System.Windows.Forms.TextBox txtProduct3_2;
+        private System.Windows.Forms.TextBox txtBarcode3_2;
         private MaterialSkin.Controls.MaterialDivider materialDivider10;
         private MaterialSkin.Controls.MaterialDivider materialDivider11;
         private MaterialSkin.Controls.MaterialDivider materialDivider12;
@@ -1154,12 +1238,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RichTextBox richTextBox3_1;
+        private System.Windows.Forms.TextBox txtPrice3_1;
+        private System.Windows.Forms.TextBox txtQty3_1;
+        private System.Windows.Forms.TextBox txtProduct3_1;
+        private System.Windows.Forms.TextBox txtBarcode3_1;
+        private System.Windows.Forms.Button buttonPrintBarcode3;
         private System.Windows.Forms.Button buttonExit3;
         private System.Windows.Forms.Button buttonExit2;
         private MaterialSkin.Controls.MaterialDivider materialDivider18;
@@ -1171,10 +1255,15 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.RichTextBox richTextBox3_3;
+        private System.Windows.Forms.TextBox txtPrice3_3;
+        private System.Windows.Forms.TextBox txtQty3_3;
+        private System.Windows.Forms.TextBox txtProduct3_3;
+        private System.Windows.Forms.TextBox txtBarcode3_3;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
     }
 }

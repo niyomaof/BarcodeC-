@@ -53,7 +53,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
             }
 
-
             /*
             ControlExtension.Draggable(labelSNameProduct,true);
             ControlExtension.Draggable(labelSPrice, true);
@@ -236,6 +235,11 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXcloseport();
                                 break;
                         }
+                        txtBarcode.Text = "";
+                        txtProduct.Text = "";
+                        txtQty.Text = "";
+                        txtPrice.Text = "";
+                        richTextBox1.Text = "";
                     }
                     else if (comboBoxS.Text == "ฉลากกลางแบบฉีก 2 ดวง")
                     {
@@ -305,6 +309,11 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXcloseport();
                                 break;
                         }
+                        txtBarcode.Text = "";
+                        txtProduct.Text = "";
+                        txtQty.Text = "";
+                        txtPrice.Text = "";
+                        richTextBox1.Text = "";
                     }
                 }
             }
@@ -1098,7 +1107,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
         }
 
-
         private void materialDivider5_Click(object sender, EventArgs e)
         {
 
@@ -1144,7 +1152,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
         {
 
         }
-
 
         private void txtY_TextChanged(object sender, EventArgs e)
         {
