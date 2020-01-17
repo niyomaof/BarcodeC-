@@ -61,6 +61,7 @@
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.ตั้งค่าหน้ากระดาษ = new System.Windows.Forms.TabPage();
+            this.Button_Exit = new System.Windows.Forms.Button();
             this.materialDivider13 = new MaterialSkin.Controls.MaterialDivider();
             this.label21 = new System.Windows.Forms.Label();
             this.materialDivider10 = new MaterialSkin.Controls.MaterialDivider();
@@ -460,6 +461,7 @@
             // 
             // ตั้งค่าหน้ากระดาษ
             // 
+            this.ตั้งค่าหน้ากระดาษ.Controls.Add(this.Button_Exit);
             this.ตั้งค่าหน้ากระดาษ.Controls.Add(this.materialDivider13);
             this.ตั้งค่าหน้ากระดาษ.Controls.Add(this.label21);
             this.ตั้งค่าหน้ากระดาษ.Controls.Add(this.materialDivider10);
@@ -492,11 +494,26 @@
             this.ตั้งค่าหน้ากระดาษ.Location = new System.Drawing.Point(4, 22);
             this.ตั้งค่าหน้ากระดาษ.Name = "ตั้งค่าหน้ากระดาษ";
             this.ตั้งค่าหน้ากระดาษ.Padding = new System.Windows.Forms.Padding(3);
-            this.ตั้งค่าหน้ากระดาษ.Size = new System.Drawing.Size(540, 712);
+            this.ตั้งค่าหน้ากระดาษ.Size = new System.Drawing.Size(549, 712);
             this.ตั้งค่าหน้ากระดาษ.TabIndex = 1;
             this.ตั้งค่าหน้ากระดาษ.Text = "ตั้งค่าหน้ากระดาษ";
             this.ตั้งค่าหน้ากระดาษ.UseVisualStyleBackColor = true;
             this.ตั้งค่าหน้ากระดาษ.Click += new System.EventHandler(this.ตั้งค่าหน้ากระดาษ_Click);
+            // 
+            // Button_Exit
+            // 
+            this.Button_Exit.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Button_Exit.FlatAppearance.BorderSize = 0;
+            this.Button_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Exit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Exit.ForeColor = System.Drawing.SystemColors.Control;
+            this.Button_Exit.Location = new System.Drawing.Point(296, 449);
+            this.Button_Exit.Name = "Button_Exit";
+            this.Button_Exit.Size = new System.Drawing.Size(131, 43);
+            this.Button_Exit.TabIndex = 77;
+            this.Button_Exit.Text = "Exit";
+            this.Button_Exit.UseVisualStyleBackColor = false;
+            this.Button_Exit.Click += new System.EventHandler(this.Button_Exit_Click);
             // 
             // materialDivider13
             // 
@@ -813,11 +830,11 @@
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save.ForeColor = System.Drawing.SystemColors.Control;
-            this.save.Location = new System.Drawing.Point(204, 443);
+            this.save.Location = new System.Drawing.Point(108, 449);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(131, 43);
             this.save.TabIndex = 49;
-            this.save.Text = "บันทึก";
+            this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = false;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
@@ -952,6 +969,7 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider11;
         private MaterialSkin.Controls.MaterialDivider materialDivider12;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Button_Exit;
     }
 }
 

@@ -32,6 +32,8 @@
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtSet2 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.buttonExit2 = new System.Windows.Forms.Button();
@@ -65,6 +67,8 @@
             this.txtProduct2_1 = new System.Windows.Forms.TextBox();
             this.txtBarcode2_1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtSet3 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -155,6 +159,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.txtSet2);
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.buttonExit2);
@@ -195,6 +201,27 @@
             this.tabPage1.Text = "ฉลาก 2 ดวง";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.SystemColors.Control;
+            this.label31.Location = new System.Drawing.Point(779, 252);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(99, 26);
+            this.label31.TabIndex = 140;
+            this.label31.Text = "จำนวนสำเนา/ชุด";
+            // 
+            // txtSet2
+            // 
+            this.txtSet2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSet2.Font = new System.Drawing.Font("AngsanaUPC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSet2.Location = new System.Drawing.Point(911, 249);
+            this.txtSet2.Name = "txtSet2";
+            this.txtSet2.Size = new System.Drawing.Size(24, 29);
+            this.txtSet2.TabIndex = 139;
+            this.txtSet2.Text = "1";
+            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -224,7 +251,7 @@
             this.buttonExit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit2.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonExit2.Location = new System.Drawing.Point(538, 340);
+            this.buttonExit2.Location = new System.Drawing.Point(531, 365);
             this.buttonExit2.Name = "buttonExit2";
             this.buttonExit2.Size = new System.Drawing.Size(82, 43);
             this.buttonExit2.TabIndex = 122;
@@ -239,7 +266,7 @@
             this.buttonPrintBarcode2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrintBarcode2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrintBarcode2.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonPrintBarcode2.Location = new System.Drawing.Point(511, 270);
+            this.buttonPrintBarcode2.Location = new System.Drawing.Point(504, 295);
             this.buttonPrintBarcode2.Name = "buttonPrintBarcode2";
             this.buttonPrintBarcode2.Size = new System.Drawing.Size(131, 43);
             this.buttonPrintBarcode2.TabIndex = 92;
@@ -565,6 +592,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label32);
+            this.tabPage2.Controls.Add(this.txtSet3);
             this.tabPage2.Controls.Add(this.label28);
             this.tabPage2.Controls.Add(this.label27);
             this.tabPage2.Controls.Add(this.label26);
@@ -619,6 +648,27 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ฉลาก 3 ดวง";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Angsana New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.Control;
+            this.label32.Location = new System.Drawing.Point(983, 253);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(99, 26);
+            this.label32.TabIndex = 142;
+            this.label32.Text = "จำนวนสำเนา/ชุด";
+            // 
+            // txtSet3
+            // 
+            this.txtSet3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSet3.Font = new System.Drawing.Font("AngsanaUPC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSet3.Location = new System.Drawing.Point(1115, 250);
+            this.txtSet3.Name = "txtSet3";
+            this.txtSet3.Size = new System.Drawing.Size(24, 29);
+            this.txtSet3.TabIndex = 141;
+            this.txtSet3.Text = "1";
             // 
             // label28
             // 
@@ -818,7 +868,7 @@
             this.buttonExit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit3.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonExit3.Location = new System.Drawing.Point(561, 334);
+            this.buttonExit3.Location = new System.Drawing.Point(561, 365);
             this.buttonExit3.Name = "buttonExit3";
             this.buttonExit3.Size = new System.Drawing.Size(82, 43);
             this.buttonExit3.TabIndex = 121;
@@ -833,7 +883,7 @@
             this.buttonPrintBarcode3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrintBarcode3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrintBarcode3.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonPrintBarcode3.Location = new System.Drawing.Point(533, 259);
+            this.buttonPrintBarcode3.Location = new System.Drawing.Point(533, 290);
             this.buttonPrintBarcode3.Name = "buttonPrintBarcode3";
             this.buttonPrintBarcode3.Size = new System.Drawing.Size(131, 43);
             this.buttonPrintBarcode3.TabIndex = 120;
@@ -1168,7 +1218,7 @@
             this.MaximizeBox = false;
             this.Name = "BarcodeAll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "บาร์โค้ดหลายใบ";
+            this.Text = "Barcode TSC_ALL";
             this.Load += new System.EventHandler(this.BacrcodeAll_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1265,5 +1315,9 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtSet2;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtSet3;
     }
 }

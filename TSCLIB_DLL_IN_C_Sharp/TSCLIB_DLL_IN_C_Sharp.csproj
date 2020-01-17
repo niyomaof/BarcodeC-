@@ -175,6 +175,126 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HYDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MB\Mb_bar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_bar2.Designer.cs">
+      <DependentUpon>Mb_bar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_bar3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_bar3.Designer.cs">
+      <DependentUpon>Mb_bar3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode1_1.Designer.cs">
+      <DependentUpon>Mb_Barcode1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode2_1.Designer.cs">
+      <DependentUpon>Mb_Barcode2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode2_2.Designer.cs">
+      <DependentUpon>Mb_Barcode2_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode3_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Barcode3_3.Designer.cs">
+      <DependentUpon>Mb_Barcode3_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Fail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Fail.Designer.cs">
+      <DependentUpon>Mb_Fail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Price1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Price1_1.Designer.cs">
+      <DependentUpon>Mb_Price1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Price2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Price2_1.Designer.cs">
+      <DependentUpon>Mb_Price2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Price2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Price2_2.Designer.cs">
+      <DependentUpon>Mb_Price2_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Price3_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Price3_3.Designer.cs">
+      <DependentUpon>Mb_Price3_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Product1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Product1_1.Designer.cs">
+      <DependentUpon>Mb_Product1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Product2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Product2_1.Designer.cs">
+      <DependentUpon>Mb_Product2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Product2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Product2_2.Designer.cs">
+      <DependentUpon>Mb_Product2_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Product3_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Product3_3.Designer.cs">
+      <DependentUpon>Mb_Product3_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Qty1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Qty1_1.Designer.cs">
+      <DependentUpon>Mb_Qty1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Qty2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Qty2_1.Designer.cs">
+      <DependentUpon>Mb_Qty2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Qty2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Qty2_2.Designer.cs">
+      <DependentUpon>Mb_Qty2_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MB\Mb_Qty3_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\Mb_Qty3_3.Designer.cs">
+      <DependentUpon>Mb_Qty3_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxYes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxYes.Designer.cs">
+      <DependentUpon>MessageBoxYes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,6 +325,66 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrom.resx">
       <DependentUpon>MainFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_bar2.resx">
+      <DependentUpon>Mb_bar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_bar3.resx">
+      <DependentUpon>Mb_bar3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Barcode1_1.resx">
+      <DependentUpon>Mb_Barcode1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Barcode2_1.resx">
+      <DependentUpon>Mb_Barcode2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Barcode2_2.resx">
+      <DependentUpon>Mb_Barcode2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Barcode3_3.resx">
+      <DependentUpon>Mb_Barcode3_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Fail.resx">
+      <DependentUpon>Mb_Fail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Price1_1.resx">
+      <DependentUpon>Mb_Price1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Price2_1.resx">
+      <DependentUpon>Mb_Price2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Price2_2.resx">
+      <DependentUpon>Mb_Price2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Price3_3.resx">
+      <DependentUpon>Mb_Price3_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Product1_1.resx">
+      <DependentUpon>Mb_Product1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Product2_1.resx">
+      <DependentUpon>Mb_Product2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Product2_2.resx">
+      <DependentUpon>Mb_Product2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Product3_3.resx">
+      <DependentUpon>Mb_Product3_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Qty1_1.resx">
+      <DependentUpon>Mb_Qty1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Qty2_1.resx">
+      <DependentUpon>Mb_Qty2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Qty2_2.resx">
+      <DependentUpon>Mb_Qty2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB\Mb_Qty3_3.resx">
+      <DependentUpon>Mb_Qty3_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxYes.resx">
+      <DependentUpon>MessageBoxYes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -298,6 +478,12 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\9104.png_300.png" />
+    <None Include="Resources\fail.png" />
+    <None Include="Resources\Error2.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\error.jpg" />
+    <None Include="Resources\nine_rich_wallet_success_icon_112949.png" />
+    <None Include="Resources\icon-success.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

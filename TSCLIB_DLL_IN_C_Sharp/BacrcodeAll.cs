@@ -1386,7 +1386,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
             try
             {
                 string text = System.IO.File.ReadAllText(@"C:\Users\Public\setting.txt");
-
+                
                 char[] s = { '\n' };
                 string[] xx = text.Split(s);
                 string bar2 = xx[0];
@@ -1398,41 +1398,54 @@ namespace TSCLIB_DLL_IN_C_Sharp
                 {
                     if (txtProduct2_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_1");
+                        MB.Mb_Product2_1 objForm = new MB.Mb_Product2_1();
+                        objForm.Show();
+                       //MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_1");
                     }
                     else if (txtQty2_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_1");
+                        MB.Mb_Qty2_1 objForm = new MB.Mb_Qty2_1();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_1");
                     }
                     else if (txtPrice2_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_1");
+                        MB.Mb_Price2_1 objForm = new MB.Mb_Price2_1();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_1");
                     }
                     else if (txtBarcode2_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_1");
+                        MB.Mb_Barcode2_1 objForm = new MB.Mb_Barcode2_1();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_1");
                     }
                     else if (txtProduct2_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_2");
+                        MB.Mb_Product2_2 objForm = new MB.Mb_Product2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_2");
                     }
                     else if (txtQty2_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_2");
+                        MB.Mb_Qty2_2 objForm = new MB.Mb_Qty2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_2");
                     }
                     else if (txtPrice2_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_2");
+                        MB.Mb_Price2_2 objForm = new MB.Mb_Price2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_2");
                     }
                     else if (txtBarcode2_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_2");
+                        MB.Mb_Barcode2_2 objForm = new MB.Mb_Barcode2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_2");
                     }
                     else
                     {
-
-
-
                         string barcode1 = richTextBox2_1.Text;
                         string product1 = txtProduct2_1.Text;
                         string qty1 = txtQty2_1.Text;
@@ -1441,8 +1454,7 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         double prices1 = double.Parse(price1);
                         double total_price1;
                         total_price1 = qtys1 * prices1;
-
-
+                        
                         string barcode2 = richTextBox2_2.Text;
                         string product2 = txtProduct2_2.Text;
                         string qty2 = txtQty2_2.Text;
@@ -1451,7 +1463,8 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         double prices2 = double.Parse(price2);
                         double total_price2;
                         total_price2 = qtys2 * prices2;
-                        //string set = txtSet.Text;
+                        string set2 = txtSet2.Text;
+
                         TSCActiveX.TSCLIB TSCLIB_DLL = new TSCActiveX.TSCLIB();
 
                         TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
@@ -1486,13 +1499,27 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         TSCLIB_DLL.ActiveXwindowsfont(520, 205, 50, 0, 0, 0, "AngsanaUPC", "มูลค่ารวม");
                         TSCLIB_DLL.ActiveXwindowsfont(630, 200, 60, 0, 0, 0, "AngsanaUPC", total_price2 + " บ.");
                         //|| ใบที่ 2
-                        TSCLIB_DLL.ActiveXprintlabel("1", "1");
+                        TSCLIB_DLL.ActiveXprintlabel(set2 , "1");
                         TSCLIB_DLL.ActiveXcloseport();
+
+                        txtBarcode2_1.Text = "";
+                        txtProduct2_1.Text = "";
+                        txtQty2_1.Text = "";
+                        txtPrice2_1.Text = "";
+                        richTextBox2_1.Text = "";
+
+                        txtBarcode2_2.Text = "";
+                        txtProduct2_2.Text = "";
+                        txtQty2_2.Text = "";
+                        txtPrice2_2.Text = "";
+                        richTextBox2_2.Text = "";
                     }
                 }
                 else
                 {
-                    MessageBox.Show("ตั้งค่าหน้ากระดาษไม่ตรงกัน กรุณาตั้งค่าหน้ากระดาษให้เป็น ฉลากกลางแบบฉีก 2 ดวง");
+                    MB.Mb_bar2 objForm = new MB.Mb_bar2();
+                    objForm.Show();
+                    //MessageBox.Show("ตั้งค่าหน้ากระดาษไม่ตรงกัน กรุณาตั้งค่าหน้ากระดาษให้เป็น ฉลากกลางแบบฉีก 2 ดวง");
                 }
             }
             catch (Exception ex)
@@ -3540,55 +3567,79 @@ namespace TSCLIB_DLL_IN_C_Sharp
                 int int2 = int.Parse(bar2);
                 string X = xx[1];
                 string Y = xx[2];
-                if (int2 == 2)
+                if (int2 == 0)
                 {
                     if (txtProduct3_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_1");
+                        MB.Mb_Product2_1 objForm = new MB.Mb_Product2_1();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_1");
                     }
                     else if (txtQty3_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_1");
+                        MB.Mb_Qty2_1 objForm = new MB.Mb_Qty2_1();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_1");
                     }
                     else if (txtPrice3_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_1");
+                        MB.Mb_Price2_1 objForm = new MB.Mb_Price2_1();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_1");
                     }
                     else if (txtBarcode3_1.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_1");
+                        MB.Mb_Barcode2_1 objForm = new MB.Mb_Barcode2_1();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_1");
                     }
                     else if (txtProduct3_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_2");
+                        MB.Mb_Product2_2 objForm = new MB.Mb_Product2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_2");
                     }
                     else if (txtQty3_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_2");
+                        MB.Mb_Qty2_2 objForm = new MB.Mb_Qty2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_2");
                     }
                     else if (txtPrice3_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_2");
+                        MB.Mb_Price2_2 objForm = new MB.Mb_Price2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_2");
                     }
                     else if (txtBarcode3_2.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_2");
+                        MB.Mb_Barcode2_2 objForm = new MB.Mb_Barcode2_2();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_2");
                     }
                     else if (txtProduct3_3.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_3");
+                        MB.Mb_Product3_3 objForm = new MB.Mb_Product3_3();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า ช่อง Barcode_3");
                     }
                     else if (txtQty3_3.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_3");
+                        MB.Mb_Qty3_3 objForm = new MB.Mb_Qty3_3();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.) ช่อง Barcode_3");
                     }
                     else if (txtPrice3_3.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_3");
+                        MB.Mb_Price3_3 objForm = new MB.Mb_Price3_3();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย ช่อง Barcode_3");
                     }
                     else if (txtBarcode3_3.Text == "")
                     {
-                        MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_3");
+                        MB.Mb_Barcode3_3 objForm = new MB.Mb_Barcode3_3();
+                        objForm.Show();
+                        //MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า ช่อง Barcode_3");
                     }
                     else
                     {
@@ -3618,7 +3669,8 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         double prices3 = double.Parse(price3);
                         double total_price3;
                         total_price3 = qtys3 * prices3;
-                        //string set = txtSet.Text;
+
+                        string set3 = txtSet3.Text;
 
                         TSCActiveX.TSCLIB TSCLIB_DLL = new TSCActiveX.TSCLIB();
 
@@ -3666,13 +3718,33 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         TSCLIB_DLL.ActiveXwindowsfont(270 + 270 + 160, 185, 50, 0, 0, 0, "AngsanaUPC", total_price3 + " บ.");
                         //|| ใบที่ 3
 
-                        TSCLIB_DLL.ActiveXprintlabel("1", "1");
+                        TSCLIB_DLL.ActiveXprintlabel(set3 , "1");
                         TSCLIB_DLL.ActiveXcloseport();
+
+                        txtBarcode3_1.Text = "";
+                        txtProduct3_1.Text = "";
+                        txtQty3_1.Text = "";
+                        txtPrice3_1.Text = "";
+                        richTextBox3_1.Text = "";
+
+                        txtBarcode3_2.Text = "";
+                        txtProduct3_2.Text = "";
+                        txtQty3_2.Text = "";
+                        txtPrice3_2.Text = "";
+                        richTextBox3_2.Text = "";
+
+                        txtBarcode3_3.Text = "";
+                        txtProduct3_3.Text = "";
+                        txtQty3_3.Text = "";
+                        txtPrice3_3.Text = "";
+                        richTextBox3_3.Text = "";
                     }
                 }
                 else
                 {
-                    MessageBox.Show("ตั้งค่าหน้ากระดาษไม่ตรงกัน กรุณาตั้งค่าหน้ากระดาษให้เป็น ฉลากเล็กแบบฉีก 3 ดวง");
+                    MB.Mb_bar3 objForm = new MB.Mb_bar3();
+                    objForm.Show();
+                    //MessageBox.Show("ตั้งค่าหน้ากระดาษไม่ตรงกัน กรุณาตั้งค่าหน้ากระดาษให้เป็น ฉลากเล็กแบบฉีก 3 ดวง");
                 }
             }
             catch (Exception ex)

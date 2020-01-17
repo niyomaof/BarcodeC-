@@ -52,17 +52,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
             {
 
             }
-
-            /*
-            ControlExtension.Draggable(labelSNameProduct,true);
-            ControlExtension.Draggable(labelSPrice, true);
-            ControlExtension.Draggable(labelSPricee, true);
-            ControlExtension.Draggable(labelSTotal, true);
-            ControlExtension.Draggable(labelSTotalS, true);
-            ControlExtension.Draggable(labelSb, true);
-            ControlExtension.Draggable(labelSGG, true);
-            ControlExtension.Draggable(pictureBoxBarcode, true);
-           */
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -81,19 +70,27 @@ namespace TSCLIB_DLL_IN_C_Sharp
             {
                 if (txtProduct.Text == "")
                 {
-                    MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า");
+                    MB.Mb_Product1_1 objForm = new MB.Mb_Product1_1();
+                    objForm.Show();
+                    //MessageBox.Show("คุณยังไม่กรอก ชื่อสินค้า");
                 }
                 else if (txtQty.Text == "")
                 {
-                    MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.)");
+                    MB.Mb_Qty1_1 objForm = new MB.Mb_Qty1_1();
+                    objForm.Show();
+                    //MessageBox.Show("คุณยังไม่กรอก ปริมาณสุทธิ (ก.ก.)");
                 }
                 else if (txtPrice.Text == "")
                 {
-                    MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย");
+                    MB.Mb_Price1_1 objForm = new MB.Mb_Price1_1();
+                    objForm.Show();
+                    //MessageBox.Show("คุณยังไม่กรอก ราคา/หน่วย");
                 }
                 else if (txtBarcode.Text == "")
                 {
-                    MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า");
+                    MB.Mb_Barcode1_1 objForm = new MB.Mb_Barcode1_1();
+                    objForm.Show();
+                    //MessageBox.Show("คุณยังไม่กรอก รหัสสินค้า");
                 }
                 else
                 {
@@ -120,8 +117,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         switch (ts)
                         {
                             case 1:
-                                MessageBox.Show("ฉลากเล็กแบบฉีก 1 ดวง");
-
                                 TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
                                 TSCLIB_DLL.ActiveXsendcommand("SIZE " + xx.ToString() + " mm, " + yy.ToString() + " mm");
                                 TSCLIB_DLL.ActiveXsendcommand("GAP 0 mm, 0 mm");
@@ -130,7 +125,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXsendcommand("DENSITY 12");
                                 TSCLIB_DLL.ActiveXsendcommand("SET TEAR ON");
                                 TSCLIB_DLL.ActiveXclearbuffer();
-
 
                                 //|| ใบที่ 1
                                 TSCLIB_DLL.ActiveXwindowsfont(80, 30, 35, 0, 0, 0, "AngsanaUPC", product);
@@ -146,9 +140,8 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXprintlabel(set, "1");
                                 TSCLIB_DLL.ActiveXcloseport();
                                 break;
-                            case 2:
-                                MessageBox.Show("ฉลากเล็กแบบฉีก 2 ดวง");
 
+                            case 2:
                                 TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
                                 TSCLIB_DLL.ActiveXsendcommand("SIZE " + xx.ToString() + " mm, " + yy.ToString() + " mm");
                                 TSCLIB_DLL.ActiveXsendcommand("GAP 0 mm, 0 mm");
@@ -184,9 +177,8 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXprintlabel(set, "1");
                                 TSCLIB_DLL.ActiveXcloseport();
                                 break;
-                            case 3:
-                                MessageBox.Show("ฉลากเล็กแบบฉีก 3 ดวง");
 
+                            case 3:
                                 TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
                                 TSCLIB_DLL.ActiveXsendcommand("SIZE " + xx.ToString() + " mm, " + yy.ToString() + " mm");
                                 TSCLIB_DLL.ActiveXsendcommand("GAP 0 mm, 0 mm");
@@ -247,7 +239,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         switch (ts)
                         {
                             case 1:
-                                MessageBox.Show("ฉลากกลางแบบฉีก 1 ดวง");
                                 TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
                                 //TSCLIB_DLL.ActiveXsendcommand("SIZE 104 mm, 31.6 mm");
                                 TSCLIB_DLL.ActiveXsendcommand("SIZE " + xx.ToString() + " mm, " + yy.ToString() + " mm");
@@ -271,8 +262,8 @@ namespace TSCLIB_DLL_IN_C_Sharp
                                 TSCLIB_DLL.ActiveXprintlabel(set, "1");
                                 TSCLIB_DLL.ActiveXcloseport();
                                 break;
+
                             case 2:
-                                MessageBox.Show("ฉลากกลางแบบฉีก 2 ดวง");
                                 TSCLIB_DLL.ActiveXopenport("TSC TTP-244 Pro");
                                 TSCLIB_DLL.ActiveXsendcommand("SIZE " + xx.ToString() + " mm, " + yy.ToString() + " mm");
                                 TSCLIB_DLL.ActiveXsendcommand("GAP 0 mm, 0 mm");
@@ -1019,7 +1010,9 @@ namespace TSCLIB_DLL_IN_C_Sharp
             {
                 if (txtBarcode.Text == "")
                 {
-                    MessageBox.Show("ยังไม่กรอก Barcode");
+                    MB.Mb_Barcode1_1 objForm = new MB.Mb_Barcode1_1();
+                    objForm.Show();
+                    //MessageBox.Show("ยังไม่กรอก Barcode");
                 }
                 else
                 {
@@ -1030,7 +1023,9 @@ namespace TSCLIB_DLL_IN_C_Sharp
             {
                 if (txtQty.Text == "")
                 {
-                    MessageBox.Show("ยังไม่กรอก ปริมาณสุทธิ (ก.ก.)");
+                    MB.Mb_Qty1_1 objForm = new MB.Mb_Qty1_1();
+                    objForm.Show();
+                    //MessageBox.Show("ยังไม่กรอก ปริมาณสุทธิ (ก.ก.)");
                 }
                 else
                 {
@@ -1041,7 +1036,9 @@ namespace TSCLIB_DLL_IN_C_Sharp
             {
                 if (txtPrice.Text == "")
                 {
-                    MessageBox.Show("ยังไม่กรอก ราคา/หน่วย");
+                    MB.Mb_Price1_1 objForm = new MB.Mb_Price1_1();
+                    objForm.Show();
+                    //MessageBox.Show("ยังไม่กรอก ราคา/หน่วย");
                 }
                 else
                 {
@@ -1062,7 +1059,9 @@ namespace TSCLIB_DLL_IN_C_Sharp
 
                 if (txtBarcode.Text == "")
                 {
-                    MessageBox.Show("ยังไม่กรอก Barcode");
+                    MB.Mb_Barcode1_1 objForm = new MB.Mb_Barcode1_1();
+                    objForm.Show();
+                    //MessageBox.Show("ยังไม่กรอก Barcode");
                 }
                 else
                 {
@@ -1093,13 +1092,12 @@ namespace TSCLIB_DLL_IN_C_Sharp
                 string[] lines = { name, x, y, s };
                 System.IO.File.WriteAllLines(@"C:\Users\Public\setting.txt", lines);
 
+                MessageBoxYes objForm = new MessageBoxYes();
+                objForm.Show();
             }
             catch
             {
-
             }
-
-
         }
 
         private void ตั้งค่าหน้ากระดาษ_Click(object sender, EventArgs e)
@@ -1243,13 +1241,17 @@ namespace TSCLIB_DLL_IN_C_Sharp
         private void button2_Click(object sender, EventArgs e)
         {
             BarcodeAll objForm = new BarcodeAll();
-            
             objForm.Show();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

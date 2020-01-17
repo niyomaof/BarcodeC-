@@ -35,7 +35,9 @@ namespace TSCLIB_DLL_IN_C_Sharp
             }
             else
             {
-                MessageBox.Show("Connection Fail");
+                MB.Mb_Fail objForm = new MB.Mb_Fail();
+                objForm.Show();
+                //MessageBox.Show("Connection Fail");
             }
         }
 
