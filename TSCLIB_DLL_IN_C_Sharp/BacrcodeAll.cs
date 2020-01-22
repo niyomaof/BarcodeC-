@@ -3757,6 +3757,11 @@ namespace TSCLIB_DLL_IN_C_Sharp
         {
             this.Close();
         }
+
+        private void txtProduct2_1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         // ================================================================================
 
     }

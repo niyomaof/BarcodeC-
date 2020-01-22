@@ -21,5 +21,20 @@ namespace TSCLIB_DLL_IN_C_Sharp.MB
         {
             this.Close();
         }
+
+        private void Mb_Barcode3_3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

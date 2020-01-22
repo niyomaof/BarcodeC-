@@ -31,5 +31,10 @@ namespace TSCLIB_DLL_IN_C_Sharp.MB
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

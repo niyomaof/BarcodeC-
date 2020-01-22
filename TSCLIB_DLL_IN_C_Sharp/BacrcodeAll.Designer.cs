@@ -577,6 +577,7 @@
             this.txtProduct2_1.Name = "txtProduct2_1";
             this.txtProduct2_1.Size = new System.Drawing.Size(102, 34);
             this.txtProduct2_1.TabIndex = 66;
+            this.txtProduct2_1.TextChanged += new System.EventHandler(this.txtProduct2_1_TextChanged);
             // 
             // txtBarcode2_1
             // 

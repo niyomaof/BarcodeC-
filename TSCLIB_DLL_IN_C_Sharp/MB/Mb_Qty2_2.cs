@@ -17,7 +17,12 @@ namespace TSCLIB_DLL_IN_C_Sharp.MB
             InitializeComponent();
         }
 
-        private void buttonMbOk_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

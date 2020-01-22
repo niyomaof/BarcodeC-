@@ -92,7 +92,8 @@
             this.save = new System.Windows.Forms.Button();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonBarcodeAll = new System.Windows.Forms.Button();
+            this.buttonCustomizeBarcode = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.hYDataSet)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             this.ปริ้น.SuspendLayout();
@@ -862,20 +863,35 @@
             this.materialTabSelector1.Text = "TabSelector1";
             this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
             // 
-            // button2
+            // buttonBarcodeAll
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(71)))), ((int)(((byte)(80)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("AngsanaUPC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(475, 64);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 32);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "ปริ้นรวม";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonBarcodeAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(71)))), ((int)(((byte)(80)))));
+            this.buttonBarcodeAll.FlatAppearance.BorderSize = 0;
+            this.buttonBarcodeAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBarcodeAll.Font = new System.Drawing.Font("AngsanaUPC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBarcodeAll.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonBarcodeAll.Location = new System.Drawing.Point(475, 64);
+            this.buttonBarcodeAll.Name = "buttonBarcodeAll";
+            this.buttonBarcodeAll.Size = new System.Drawing.Size(75, 32);
+            this.buttonBarcodeAll.TabIndex = 66;
+            this.buttonBarcodeAll.Text = "ปริ้นรวม";
+            this.buttonBarcodeAll.UseVisualStyleBackColor = false;
+            this.buttonBarcodeAll.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonCustomizeBarcode
+            // 
+            this.buttonCustomizeBarcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(71)))), ((int)(((byte)(80)))));
+            this.buttonCustomizeBarcode.FlatAppearance.BorderSize = 0;
+            this.buttonCustomizeBarcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustomizeBarcode.Font = new System.Drawing.Font("AngsanaUPC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustomizeBarcode.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonCustomizeBarcode.Location = new System.Drawing.Point(357, 64);
+            this.buttonCustomizeBarcode.Name = "buttonCustomizeBarcode";
+            this.buttonCustomizeBarcode.Size = new System.Drawing.Size(112, 32);
+            this.buttonCustomizeBarcode.TabIndex = 67;
+            this.buttonCustomizeBarcode.Text = "ปรับแต่งบาร์โค้ด";
+            this.buttonCustomizeBarcode.UseVisualStyleBackColor = false;
+            this.buttonCustomizeBarcode.Click += new System.EventHandler(this.buttonCustomizeBarcode_Click);
             // 
             // BarcodeTSC
             // 
@@ -883,7 +899,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(550, 829);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonCustomizeBarcode);
+            this.Controls.Add(this.buttonBarcodeAll);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
@@ -968,8 +985,9 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider10;
         private MaterialSkin.Controls.MaterialDivider materialDivider11;
         private MaterialSkin.Controls.MaterialDivider materialDivider12;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonBarcodeAll;
         private System.Windows.Forms.Button Button_Exit;
+        private System.Windows.Forms.Button buttonCustomizeBarcode;
     }
 }
 
