@@ -1502,12 +1502,15 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         TSCLIB_DLL.ActiveXprintlabel(set2 , "1");
                         TSCLIB_DLL.ActiveXcloseport();
 
+                        // พอปริ้นแล้วให้ลบข้อมูลใน Text ออกทั้งสามช่อง
+                        // == Barcode_1 == //
                         txtBarcode2_1.Text = "";
                         txtProduct2_1.Text = "";
                         txtQty2_1.Text = "";
                         txtPrice2_1.Text = "";
                         richTextBox2_1.Text = "";
 
+                        // == Barcode_2 == //
                         txtBarcode2_2.Text = "";
                         txtProduct2_2.Text = "";
                         txtQty2_2.Text = "";
@@ -3721,18 +3724,22 @@ namespace TSCLIB_DLL_IN_C_Sharp
                         TSCLIB_DLL.ActiveXprintlabel(set3 , "1");
                         TSCLIB_DLL.ActiveXcloseport();
 
+                        // พอปริ้นแล้วให้ลบข้อมูลใน Text ออกทั้งสามช่อง
+                        // == Barcode_1 == //
                         txtBarcode3_1.Text = "";
                         txtProduct3_1.Text = "";
                         txtQty3_1.Text = "";
                         txtPrice3_1.Text = "";
                         richTextBox3_1.Text = "";
 
+                        // == Barcode_2 == //
                         txtBarcode3_2.Text = "";
                         txtProduct3_2.Text = "";
                         txtQty3_2.Text = "";
                         txtPrice3_2.Text = "";
                         richTextBox3_2.Text = "";
 
+                        // == Barcode_3 == //
                         txtBarcode3_3.Text = "";
                         txtProduct3_3.Text = "";
                         txtQty3_3.Text = "";

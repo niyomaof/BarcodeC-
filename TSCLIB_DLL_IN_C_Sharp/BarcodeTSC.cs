@@ -34,8 +34,6 @@ namespace TSCLIB_DLL_IN_C_Sharp
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
             this.sKUMASTERTableAdapter.Fill(this.hYDataSet.SKUMASTER);
             try
             {
@@ -1287,6 +1285,16 @@ namespace TSCLIB_DLL_IN_C_Sharp
             buttonCustomizeBarcode.Enabled = false;
             buttonBarcodeAll.Enabled = false;
             materialTabSelector1.Enabled = false;*/
+        }
+
+        private void tabPage1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialDivider14_Click(object sender, EventArgs e)
+        {
+
         }
         /////=====================================================================================//////
     }

@@ -487,6 +487,7 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\9104.png_300.png" />
+    <None Include="Resources\barcode.png" />
     <None Include="Resources\fail.png" />
     <None Include="Resources\Error2.png" />
     <None Include="Resources\error.png" />
